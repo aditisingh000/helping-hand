@@ -63,16 +63,6 @@ HelpingHand connects people in the same geographic area to organize and attend c
 
 2. **Install dependencies**
    ```bash
-   # Install backend dependencies
-   cd server
-   npm install
-
-   # Install frontend dependencies
-   cd ../client
-   npm install
-
-   # Install mobile app dependencies (if applicable)
-   cd ../mobile
    npm install
    ```
 
