@@ -13,7 +13,7 @@ export default [
   },
   js.configs.recommended,
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["src/**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -46,6 +46,29 @@ export default [
           alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
+    },
+  },
+  {
+    files: ["vite.config.ts"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.node.json",
+        tsconfigRootDir: import.meta.dirname,
+        sourceType: "module",
+      },
+      globals: {
+        ...globals.node,
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+      import: importPlugin,
+    },
+    rules: {
+      ...tsPlugin.configs.recommended.rules,
+      ...tsPlugin.configs["recommended-type-checked"].rules,
+      ...prettierConfig.rules,
     },
   },
 ];
