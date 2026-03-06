@@ -1,0 +1,26 @@
+{
+  "name": "helping-hand",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "client",
+    "server",
+    "mobile"
+  ],
+  "scripts": {
+    "build": "npm run -ws --if-present build",
+    "dev": "npm run -ws --if-present dev",
+    "lint": "npm run -ws --if-present lint",
+    "start": "npm run -ws --if-present start",
+    "test": "npm run -ws --if-present test",
+    "typecheck": "npm run -ws --if-present typecheck",
+    "format": "npm run -ws --if-present format",
+    "format:check": "npm run -ws --if-present format:check"
+  },
+  "packageManager": "npm@10"
+}
+
