@@ -68,6 +68,9 @@ HelpingHand connects people in the same geographic area to organize and attend c
 
 3. **Set up environment variables**
    ```bash
+   # Repo root (optional overrides for Docker Compose)
+   cp .env.example .env
+
    # Backend (.env)
    cp server/.env.example server/.env
    # Edit server/.env with your configuration
@@ -77,14 +80,22 @@ HelpingHand connects people in the same geographic area to organize and attend c
    # Edit client/.env with your API keys
    ```
 
-4. **Set up the database**
+4. **Start local infrastructure (PostgreSQL + Redis)**
+   ```bash
+   docker compose up -d
+   docker compose ps
+   ```
+
+   For a full local setup guide, see [docs/LOCAL_DEVELOPMENT.md](./docs/LOCAL_DEVELOPMENT.md).
+
+5. **Set up the database**
    ```bash
    cd server
    npm run db:migrate
    npm run db:seed
    ```
 
-5. **Start the development servers**
+6. **Start the development servers**
    ```bash
    # Terminal 1: Backend server
    cd server
