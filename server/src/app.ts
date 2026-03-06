@@ -5,8 +5,7 @@ export function createApp() {
   const app = express();
 
   const allowedOrigins =
-    process.env.CORS_ORIGIN
-      ?.split(",")
+    process.env.CORS_ORIGIN?.split(",")
       .map((origin) => origin.trim())
       .filter((origin) => origin.length > 0) ?? [];
 
