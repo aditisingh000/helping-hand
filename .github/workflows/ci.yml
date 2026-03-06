@@ -1,28 +1,44 @@
-name: CI
+name: Continuous Integration
 
 on:
-  pull_request:
   push:
-    branches:
-      - main
-      - master
-      - phase-1-infrastructure
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
 
 jobs:
-  smoke:
+  build_and_test:
+    name: Build & Test
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
-      - name: Install
-        run: npm install
+    - name: Install dependencies
+      run: npm ci
 
-      - name: Test
-        run: npm test --workspaces --if-present
+    - name: Check code formatting
+      run: npm run format:check --if-present
 
+    - name: Run ESLint
+      run: npm run lint --if-present
+
+    - name: Run Typecheck
+      run: npm run typecheck --ws --if-present
+
+    - name: Build projects
+      run: npm run build --if-present
+
+    - name: Run tests
+      run: npm run test --if-present
