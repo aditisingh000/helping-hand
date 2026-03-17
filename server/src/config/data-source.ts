@@ -23,4 +23,9 @@ export const AppDataSource = new DataSource({
   entities: [path.join(__dirname, "../models/**/*.{ts,js}")],
   migrations: [path.join(__dirname, "../migrations/**/*.{ts,js}")],
   subscribers: [],
+  extra: {
+    // Database connection pooling configuration
+    max: process.env.DB_POOL_MAX ? parseInt(process.env.DB_POOL_MAX) : 20,
+    idleTimeoutMillis: 30000,
+  },
 });
