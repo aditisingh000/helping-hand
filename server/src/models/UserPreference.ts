@@ -22,7 +22,7 @@ export class UserPreference {
 
   @OneToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
-  user: User;
+  user: import("./User.js").User;
 
   @Column({ name: "default_radius_km", default: 10 })
   @IsInt()

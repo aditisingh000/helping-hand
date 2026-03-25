@@ -28,11 +28,11 @@ export class EventReport {
 
   @ManyToOne(() => Event, { onDelete: "CASCADE" })
   @JoinColumn({ name: "event_id" })
-  event: Event;
+  event: import("./Event.js").Event;
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "reported_by" })
-  reporter: User;
+  reporter: import("./User.js").User;
 
   @Column({ length: 100 })
   @IsString()
@@ -56,7 +56,7 @@ export class EventReport {
 
   @ManyToOne(() => User, { nullable: true })
   @JoinColumn({ name: "reviewed_by" })
-  reviewer: User;
+  reviewer: import("./User.js").User;
 
   @Column({ type: "timestamp", name: "reviewed_at", nullable: true })
   @IsDate()

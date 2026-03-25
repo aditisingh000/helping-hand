@@ -22,7 +22,7 @@ export class Notification {
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
-  user: User;
+  user: import("./User.js").User;
 
   @Column({ length: 50 })
   @IsString()
@@ -45,7 +45,7 @@ export class Notification {
 
   @ManyToOne(() => Event, { onDelete: "CASCADE", nullable: true })
   @JoinColumn({ name: "related_event_id" })
-  relatedEvent: Event;
+  relatedEvent: import("./Event.js").Event;
 
   @Column("uuid", { name: "related_user_id", nullable: true })
   @IsUUID()
@@ -54,7 +54,7 @@ export class Notification {
 
   @ManyToOne(() => User, { onDelete: "CASCADE", nullable: true })
   @JoinColumn({ name: "related_user_id" })
-  relatedUser: User;
+  relatedUser: import("./User.js").User;
 
   @Column({ default: false })
   @IsBoolean()

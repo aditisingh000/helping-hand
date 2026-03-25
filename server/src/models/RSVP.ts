@@ -29,11 +29,11 @@ export class RSVP {
 
   @ManyToOne(() => Event, (event) => event.rsvps, { onDelete: "CASCADE" })
   @JoinColumn({ name: "event_id" })
-  event: Event;
+  event: import("./Event.js").Event;
 
   @ManyToOne(() => User, (user) => user.rsvps, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
-  user: User;
+  user: import("./User.js").User;
 
   @Column({ length: 20, default: "going" })
   @IsString()

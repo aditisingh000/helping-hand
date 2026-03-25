@@ -28,11 +28,11 @@ export class Comment {
 
   @ManyToOne(() => Event, (event) => event.comments, { onDelete: "CASCADE" })
   @JoinColumn({ name: "event_id" })
-  event: Event;
+  event: import("./Event.js").Event;
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
-  user: User;
+  user: import("./User.js").User;
 
   @Column("text")
   @IsString()
@@ -48,7 +48,7 @@ export class Comment {
     nullable: true,
   })
   @JoinColumn({ name: "parent_id" })
-  parent: Comment;
+  parent: import("./Comment.js").Comment;
 
   @OneToMany(() => Comment, (comment) => comment.parent)
   replies: Comment[];

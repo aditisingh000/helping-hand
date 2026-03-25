@@ -30,11 +30,11 @@ export class Friendship {
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
-  user: User;
+  user: import("./User.js").User;
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
   @JoinColumn({ name: "friend_id" })
-  friend: User;
+  friend: import("./User.js").User;
 
   @Column({ length: 20, default: "pending" })
   @IsString()

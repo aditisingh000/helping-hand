@@ -25,7 +25,7 @@ export class Event {
 
   @ManyToOne(() => User, (user) => user.hostedEvents, { onDelete: "CASCADE" })
   @JoinColumn({ name: "host_id" })
-  host: User;
+  host: import("./User.js").User;
 
   @Column({ length: 255 })
   @IsString()
