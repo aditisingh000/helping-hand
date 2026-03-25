@@ -8,6 +8,7 @@ import {
   JoinColumn,
   Unique,
 } from "typeorm";
+import { IsUUID, IsString, IsInt, IsOptional, IsDate, MaxLength, Min } from "class-validator";
 import { User } from "./User.js";
 import { Event } from "./Event.js";
 
@@ -15,12 +16,15 @@ import { Event } from "./Event.js";
 @Unique(["eventId", "userId"])
 export class RSVP {
   @PrimaryGeneratedColumn("uuid")
+  @IsUUID()
   id: string;
 
   @Column("uuid", { name: "event_id" })
+  @IsUUID()
   eventId: string;
 
   @Column("uuid", { name: "user_id" })
+  @IsUUID()
   userId: string;
 
   @ManyToOne(() => Event, (event) => event.rsvps, { onDelete: "CASCADE" })
@@ -32,17 +36,25 @@ export class RSVP {
   user: User;
 
   @Column({ length: 20, default: "going" })
+  @IsString()
+  @MaxLength(20)
   status: string;
 
   @Column({ name: "guests_count", default: 0 })
+  @IsInt()
+  @Min(0)
   guestsCount: number;
 
   @CreateDateColumn({ name: "created_at" })
+  @IsDate()
   createdAt: Date;
 
   @UpdateDateColumn({ name: "updated_at" })
+  @IsDate()
   updatedAt: Date;
 
   @Column({ type: "timestamp", name: "cancelled_at", nullable: true })
+  @IsDate()
+  @IsOptional()
   cancelledAt: Date;
 }

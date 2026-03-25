@@ -9,6 +9,7 @@ import {
   Unique,
   Check,
 } from "typeorm";
+import { IsUUID, IsString, IsDate, MaxLength } from "class-validator";
 import { User } from "./User.js";
 
 @Entity("friendships")
@@ -16,12 +17,15 @@ import { User } from "./User.js";
 @Check(`"user_id" != "friend_id"`)
 export class Friendship {
   @PrimaryGeneratedColumn("uuid")
+  @IsUUID()
   id: string;
 
   @Column("uuid", { name: "user_id" })
+  @IsUUID()
   userId: string;
 
   @Column("uuid", { name: "friend_id" })
+  @IsUUID()
   friendId: string;
 
   @ManyToOne(() => User, { onDelete: "CASCADE" })
@@ -33,11 +37,15 @@ export class Friendship {
   friend: User;
 
   @Column({ length: 20, default: "pending" })
+  @IsString()
+  @MaxLength(20)
   status: string;
 
   @CreateDateColumn({ name: "created_at" })
+  @IsDate()
   createdAt: Date;
 
   @UpdateDateColumn({ name: "updated_at" })
+  @IsDate()
   updatedAt: Date;
 }
