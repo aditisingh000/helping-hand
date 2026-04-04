@@ -67,6 +67,7 @@ HelpingHand follows a modern, scalable architecture designed to support high tra
 ### 1. Client Layer
 
 #### Web Application (React)
+
 - **Framework**: React 18 with TypeScript
 - **State Management**: Redux Toolkit
 - **Routing**: React Router v6
@@ -75,6 +76,7 @@ HelpingHand follows a modern, scalable architecture designed to support high tra
 - **Data Fetching**: React Query / TanStack Query
 
 **Key Components:**
+
 ```
 src/
 ├── components/
@@ -104,6 +106,7 @@ src/
 ```
 
 #### Mobile Application (React Native)
+
 - **Framework**: React Native with Expo
 - **Navigation**: React Navigation
 - **State Management**: Redux Toolkit
@@ -111,6 +114,7 @@ src/
 - **Push Notifications**: Expo Notifications
 
 **Key Screens:**
+
 ```
 src/
 ├── screens/
@@ -127,6 +131,7 @@ src/
 ### 2. API Gateway
 
 **Responsibilities:**
+
 - Request routing to appropriate services
 - Authentication and authorization
 - Rate limiting
@@ -137,19 +142,22 @@ src/
 **Technology**: Express.js with middleware stack
 
 **Middleware Stack:**
+
 ```javascript
-app.use(helmet())              // Security headers
-app.use(cors())                // CORS configuration
-app.use(rateLimit())          // Rate limiting
-app.use(authenticate)         // JWT validation
-app.use(validateRequest)      // Request validation
-app.use(errorHandler)         // Error handling
+app.use(helmet()); // Security headers
+app.use(cors()); // CORS configuration
+app.use(rateLimit()); // Rate limiting
+app.use(authenticate); // JWT validation
+app.use(validateRequest); // Request validation
+app.use(errorHandler); // Error handling
 ```
 
 ### 3. Service Layer
 
 #### Event Service
+
 **Responsibilities:**
+
 - Event CRUD operations
 - RSVP management
 - Comment system
@@ -157,6 +165,7 @@ app.use(errorHandler)         // Error handling
 - Capacity management
 
 **Endpoints:**
+
 ```
 GET    /api/events              # List events with filters
 GET    /api/events/:id          # Get event details
@@ -170,13 +179,16 @@ POST   /api/events/:id/comments # Add comment
 ```
 
 #### User Service
+
 **Responsibilities:**
+
 - User authentication (JWT)
 - User profile management
 - Friend connections
 - User search
 
 **Endpoints:**
+
 ```
 POST   /api/auth/register       # Register user
 POST   /api/auth/login          # Login
@@ -189,7 +201,9 @@ DELETE /api/users/:id/friends   # Remove friend
 ```
 
 #### Map Service
+
 **Responsibilities:**
+
 - Geospatial queries
 - Radius-based event search
 - Distance calculations
@@ -198,6 +212,7 @@ DELETE /api/users/:id/friends   # Remove friend
 **Technology**: PostgreSQL with PostGIS extension
 
 **Key Queries:**
+
 ```sql
 -- Find events within radius
 SELECT * FROM events
@@ -210,7 +225,9 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 ```
 
 #### Notification Service
+
 **Responsibilities:**
+
 - Real-time notifications via WebSocket
 - Push notifications for mobile
 - Email notifications
@@ -219,7 +236,9 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 **Technology**: Socket.io for WebSocket, Expo Push Notifications
 
 #### File Service
+
 **Responsibilities:**
+
 - Image upload handling
 - Image optimization and resizing
 - CDN integration
@@ -230,7 +249,9 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 ### 4. Data Layer
 
 #### PostgreSQL Database
+
 **Primary Database** for:
+
 - Users and authentication
 - Events and RSVPs
 - Comments
@@ -238,6 +259,7 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 - Notifications
 
 **Extensions:**
+
 - PostGIS for geospatial data
 - pg_trgm for full-text search
 - pgcrypto for password hashing
@@ -245,7 +267,9 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 **Connection Pooling**: pg-pool
 
 #### Redis Cache
+
 **Use Cases:**
+
 - Session storage
 - API response caching
 - Real-time data (Socket.io)
@@ -253,6 +277,7 @@ ORDER BY ST_Distance(location, ST_MakePoint(:lng, :lat)::geography);
 - Geospatial caching
 
 **Key Patterns:**
+
 ```
 user:{userId}:profile          # User profile cache
 events:radius:{lat}:{lng}      # Cached event lists
@@ -260,7 +285,9 @@ event:{eventId}:rsvps          # RSVP count cache
 ```
 
 #### Object Storage (S3/Cloud Storage)
+
 **Storage for:**
+
 - Event banner images
 - User profile photos
 - Event photos
@@ -271,6 +298,7 @@ event:{eventId}:rsvps          # RSVP count cache
 ## Data Flow
 
 ### Event Discovery Flow
+
 ```
 1. User opens map → Client requests events
 2. API Gateway receives request
@@ -281,6 +309,7 @@ event:{eventId}:rsvps          # RSVP count cache
 ```
 
 ### Event Creation Flow
+
 ```
 1. User fills form → Client sends POST /api/events
 2. API Gateway validates and routes to Event Service
@@ -292,6 +321,7 @@ event:{eventId}:rsvps          # RSVP count cache
 ```
 
 ### Real-time Notification Flow
+
 ```
 1. Event occurs (new RSVP, comment, etc.)
 2. Service publishes event to Redis pub/sub
@@ -304,6 +334,7 @@ event:{eventId}:rsvps          # RSVP count cache
 ## Security Architecture
 
 ### Authentication Flow
+
 ```
 1. User logs in → POST /api/auth/login
 2. Server validates credentials
@@ -314,12 +345,14 @@ event:{eventId}:rsvps          # RSVP count cache
 ```
 
 ### Authorization
+
 - Role-based access control (RBAC)
 - Resource-level permissions
 - Event ownership validation
 - Friend-only features
 
 ### Security Measures
+
 - HTTPS only
 - JWT token expiration
 - Rate limiting per IP/user
@@ -332,13 +365,15 @@ event:{eventId}:rsvps          # RSVP count cache
 ## Scalability Considerations
 
 ### Horizontal Scaling
+
 - Stateless API services (can scale horizontally)
 - Load balancer distributes requests
 - Database read replicas for read-heavy operations
 - Redis cluster for distributed caching
 
 ### Performance Optimization
-- **Database Indexing**: 
+
+- **Database Indexing**:
   - Geospatial indexes on event locations
   - Indexes on frequently queried fields
 - **Caching Strategy**:
@@ -351,6 +386,7 @@ event:{eventId}:rsvps          # RSVP count cache
   - Pin clustering on map for performance
 
 ### Monitoring & Observability
+
 - **Logging**: Winston/Pino for structured logging
 - **Metrics**: Prometheus + Grafana
 - **APM**: New Relic / Datadog
@@ -360,6 +396,7 @@ event:{eventId}:rsvps          # RSVP count cache
 ## Deployment Architecture
 
 ### Development Environment
+
 ```
 Local Development:
 - Docker Compose for services
@@ -369,6 +406,7 @@ Local Development:
 ```
 
 ### Production Environment
+
 ```
 Cloud Provider (AWS/GCP):
 ├── Frontend: Vercel / CloudFront
@@ -383,34 +421,40 @@ Cloud Provider (AWS/GCP):
 ## Future Architecture Enhancements
 
 ### Microservices Migration
+
 As the application grows, services can be split:
+
 - Event Service → Event Management + RSVP Service
 - User Service → Auth Service + Profile Service
 - Map Service → Geospatial Service + Search Service
 
 ### Message Queue
+
 For async processing:
+
 - RabbitMQ / AWS SQS for event processing
 - Background jobs for notifications
 - Image processing queue
 
 ### GraphQL API
+
 Alternative API layer:
+
 - Apollo Server for GraphQL
 - Type-safe queries
 - Efficient data fetching
 
 ## Technology Decisions
 
-| Component | Technology | Rationale |
-|-----------|-----------|-----------|
-| Frontend | React | Large ecosystem, component reusability |
-| Backend | Node.js/Express | JavaScript across stack, fast development |
-| Database | PostgreSQL | ACID compliance, PostGIS for geospatial |
-| Cache | Redis | Fast, supports pub/sub for real-time |
-| Maps | Google Maps | Reliable, feature-rich, good documentation |
-| Mobile | React Native | Code sharing with web, cross-platform |
-| Auth | JWT | Stateless, scalable, industry standard |
+| Component | Technology      | Rationale                                  |
+| --------- | --------------- | ------------------------------------------ |
+| Frontend  | React           | Large ecosystem, component reusability     |
+| Backend   | Node.js/Express | JavaScript across stack, fast development  |
+| Database  | PostgreSQL      | ACID compliance, PostGIS for geospatial    |
+| Cache     | Redis           | Fast, supports pub/sub for real-time       |
+| Maps      | Google Maps     | Reliable, feature-rich, good documentation |
+| Mobile    | React Native    | Code sharing with web, cross-platform      |
+| Auth      | JWT             | Stateless, scalable, industry standard     |
 
 ---
 

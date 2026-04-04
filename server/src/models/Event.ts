@@ -8,7 +8,16 @@ import {
   JoinColumn,
   OneToMany,
 } from "typeorm";
-import { IsUUID, IsString, IsInt, IsOptional, IsBoolean, IsDate, MaxLength, Min } from "class-validator";
+import {
+  IsUUID,
+  IsString,
+  IsInt,
+  IsOptional,
+  IsBoolean,
+  IsDate,
+  MaxLength,
+  Min,
+} from "class-validator";
 import { User } from "./User.js";
 import { RSVP } from "./RSVP.js";
 import { Comment } from "./Comment.js";

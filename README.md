@@ -13,18 +13,21 @@ HelpingHand connects people in the same geographic area to organize and attend c
 ## ✨ Key Features
 
 ### 🗺️ Interactive Map
+
 - Google Maps integration with event pins
 - Color-coded pins by event category
 - Radius-based filtering
 - Real-time event discovery
 
 ### 📅 Event Management
+
 - **Host Events**: Create and manage community events
 - **RSVP System**: Easy RSVP with attendee tracking
 - **Event Categories**: Organize by type (volunteering, social, educational, etc.)
 - **Capacity Management**: Set and track event limits
 
 ### 👥 Social Features
+
 - User profiles with event history
 - Friend connections
 - Follow hosts
@@ -32,11 +35,13 @@ HelpingHand connects people in the same geographic area to organize and attend c
 - Comment system for events
 
 ### 📱 Cross-Platform
+
 - **Web App**: Full-featured browser experience
 - **Mobile App**: Native iOS and Android applications
 - Responsive design for all screen sizes
 
 ### ♿ Accessibility
+
 - WCAG 2.1 AA compliance
 - Screen reader support
 - Keyboard navigation
@@ -56,17 +61,20 @@ HelpingHand connects people in the same geographic area to organize and attend c
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/helping-hand.git
    cd helping-hand
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    # Repo root (optional overrides for Docker Compose)
    cp .env.example .env
@@ -81,6 +89,7 @@ HelpingHand connects people in the same geographic area to organize and attend c
    ```
 
 4. **Start local infrastructure (PostgreSQL + Redis)**
+
    ```bash
    docker compose up -d
    docker compose ps
@@ -89,6 +98,7 @@ HelpingHand connects people in the same geographic area to organize and attend c
    For a full local setup guide, see [docs/LOCAL_DEVELOPMENT.md](./docs/LOCAL_DEVELOPMENT.md).
 
 5. **Set up the database**
+
    ```bash
    cd server
    npm run db:migrate
@@ -96,6 +106,7 @@ HelpingHand connects people in the same geographic area to organize and attend c
    ```
 
 6. **Start the development servers**
+
    ```bash
    # Terminal 1: Backend server
    cd server
@@ -156,6 +167,7 @@ helping-hand/
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **React 18+** - UI library
 - **TypeScript** - Type safety
 - **React Router** - Routing
@@ -165,6 +177,7 @@ helping-hand/
 - **React Query** - Data fetching
 
 ### Backend
+
 - **Node.js** - Runtime
 - **Express.js** - Web framework
 - **TypeScript** - Type safety
@@ -175,12 +188,14 @@ helping-hand/
 - **Socket.io** - Real-time features
 
 ### Mobile
+
 - **React Native** - Cross-platform mobile
 - **Expo** - Development tooling
 - **React Navigation** - Navigation
 - **Redux Toolkit** - State management
 
 ### Infrastructure
+
 - **AWS / GCP** - Cloud hosting
 - **Vercel** - Frontend hosting
 - **CloudFront / Cloudflare** - CDN
@@ -194,6 +209,7 @@ See [TECH_STACK.md](./docs/TECH_STACK.md) for detailed technology choices and ra
 The application uses PostgreSQL with geospatial extensions for location-based queries. See [DATABASE_SCHEMA.md](./docs/DATABASE_SCHEMA.md) for the complete schema design.
 
 Key entities:
+
 - **Users** - User accounts and profiles
 - **Events** - Community events
 - **RSVPs** - Event attendance
@@ -206,6 +222,7 @@ Key entities:
 HelpingHand follows a microservices-ready architecture with clear separation of concerns. See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed architecture diagrams and explanations.
 
 Key components:
+
 - **API Gateway** - Request routing and authentication
 - **Event Service** - Event management
 - **User Service** - User profiles and authentication
@@ -216,6 +233,7 @@ Key components:
 ## 🎨 Design & Wireframes
 
 UI/UX wireframes and design guidelines are documented in [WIREFRAMES.md](./docs/WIREFRAMES.md). The design prioritizes:
+
 - Clean, modern interface
 - Mobile-first responsive design
 - Accessibility compliance
@@ -226,30 +244,35 @@ UI/UX wireframes and design guidelines are documented in [WIREFRAMES.md](./docs/
 See [.github/ISSUES.md](./.github/ISSUES.md) for a comprehensive list of planned features and issues.
 
 ### Phase 1: Foundation (Weeks 1-4)
+
 - Project setup and infrastructure
 - Authentication system
 - Basic user profiles
 - Database schema implementation
 
 ### Phase 2: Core Features (Weeks 5-8)
+
 - Map integration
 - Event creation and management
 - RSVP system
 - Basic search and filtering
 
 ### Phase 3: Social Features (Weeks 9-12)
+
 - Friend connections
 - Comments system
 - Notifications
 - User profiles enhancement
 
 ### Phase 4: Mobile App (Weeks 13-16)
+
 - React Native setup
 - Mobile-specific UI/UX
 - Push notifications
 - App store deployment
 
 ### Phase 5: Polish & Scale (Weeks 17-20)
+
 - Performance optimization
 - Accessibility improvements
 - Advanced features
@@ -287,6 +310,7 @@ npm run build
 ### Environment Setup
 
 Production requires:
+
 - PostgreSQL database
 - Redis instance
 - Google Maps API key

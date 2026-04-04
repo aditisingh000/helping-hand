@@ -9,4 +9,3 @@ This file tracks major project issues / milestones for the HelpingHand monorepo.
 - [ ] #3 Configure Backend Build System
 - [ ] #4 Configure Frontend Build System
 - [ ] #5 Set Up CI/CD Pipeline
-

@@ -24,7 +24,7 @@ describe("Database Models Validation", () => {
       user.isActive = true;
       user.isAdmin = false;
       user.emailVerified = false;
-      
+
       const errors = await validate(user);
       expect(errors.length).toBe(0);
     });
@@ -40,7 +40,7 @@ describe("Database Models Validation", () => {
       user.isActive = true;
       user.isAdmin = false;
       user.emailVerified = false;
-      
+
       const errors = await validate(user);
       expect(errors.length).toBeGreaterThan(0);
       expect(errors[0]?.property).toBe("email");
@@ -63,7 +63,7 @@ describe("Database Models Validation", () => {
       event.status = "active";
       event.createdAt = new Date();
       event.updatedAt = new Date();
-      
+
       const errors = await validate(event);
       expect(errors.length).toBe(0);
     });
@@ -117,7 +117,7 @@ describe("Database Models Validation", () => {
       comment.createdAt = new Date();
       comment.updatedAt = new Date();
       comment.isEdited = false;
-      
+
       const errors = await validate(comment);
       expect(errors.length).toBe(0);
     });

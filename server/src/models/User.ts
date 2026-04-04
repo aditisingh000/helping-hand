@@ -6,7 +6,15 @@ import {
   UpdateDateColumn,
   OneToMany,
 } from "typeorm";
-import { IsUUID, IsEmail, IsString, IsOptional, IsBoolean, IsDate, MaxLength } from "class-validator";
+import {
+  IsUUID,
+  IsEmail,
+  IsString,
+  IsOptional,
+  IsBoolean,
+  IsDate,
+  MaxLength,
+} from "class-validator";
 import { Event } from "./Event.js";
 import { RSVP } from "./RSVP.js";
 
