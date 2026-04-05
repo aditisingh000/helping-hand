@@ -56,6 +56,7 @@ const Profile = () => {
 
   useEffect(() => {
     fetchProfile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [targetId]);
 
   const handleAvatarChange = async (e: React.ChangeEvent<HTMLInputElement>) => {

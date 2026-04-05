@@ -54,6 +54,7 @@ export default [
       "@typescript-eslint/no-floating-promises": "off",
       "@typescript-eslint/require-await": "off",
       "no-undef": "off",
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }]
     },
   },
   {

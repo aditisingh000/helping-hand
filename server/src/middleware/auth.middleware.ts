@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 
 import { AppDataSource } from "../config/data-source.js";
 import { User } from "../models/User.js";
-import { verifyToken, TokenPayload } from "../utils/auth.js";
+import { verifyToken } from "../utils/auth.js";
 
 // Extend Express Request object to hold current user
 declare global {
@@ -21,8 +21,6 @@ export const authenticate = async (req: Request, res: Response, next: NextFuncti
     const authHeader = req.headers.authorization;
     if (authHeader && authHeader.startsWith("Bearer ")) {
       token = authHeader.split(" ")[1];
-    } else if (req.signedCookies && req.signedCookies.jwt) {
-      token = req.signedCookies.jwt;
     } else if (req.signedCookies && req.signedCookies.jwt) {
       token = req.signedCookies.jwt;
     } else if (req.cookies && req.cookies.jwt) {
