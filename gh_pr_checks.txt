@@ -1,0 +1,3 @@
+Build & Test (20.x)	fail	15s	https://github.com/aditisingh000/helping-hand/actions/runs/23993164931/job/69976295597	
+CodeQL	fail	4s	https://github.com/aditisingh000/helping-hand/runs/69976343185	
+Analyze (javascript)	pass	1m12s	https://github.com/aditisingh000/helping-hand/actions/runs/23993164937/job/69976295611	
