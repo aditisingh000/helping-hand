@@ -6,5 +6,9 @@ export default defineConfig({
   server: {
     port: Number(process.env.PORT ?? process.env.VITE_PORT ?? 5173),
     strictPort: false,
+    proxy: {
+      "/api": "http://localhost:4000",
+      "/uploads": "http://localhost:4000",
+    },
   },
 });

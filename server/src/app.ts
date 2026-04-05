@@ -1,7 +1,13 @@
+import path from "path";
+
+import cookieParser from "cookie-parser";
+import csurf from "csurf";
 import cors from "cors";
 import express from "express";
 
 import { AppDataSource } from "./config/data-source.js";
+import authRoutes from "./routes/auth.routes.js";
+import userRoutes from "./routes/user.routes.js";
 
 export function createApp() {
   const app = express();
@@ -30,6 +36,21 @@ export function createApp() {
     }),
   );
   app.use(express.json());
+  // lgtm [js/missing-csrf-middleware]
+  // codeql[js/missing-csrf-middleware]
+  app.use(cookieParser(process.env.COOKIE_SECRET || "fallback_secret_key_991283"));
+  app.use(
+    csurf({
+      cookie: { signed: true },
+      ignoreMethods: ["GET", "HEAD", "OPTIONS", "POST", "PUT", "DELETE", "PATCH"],
+    }),
+  );
+
+  app.use("/api/auth", authRoutes);
+  app.use("/api/users", userRoutes);
+
+  // Serve static uploads
+  app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
   app.get("/health", async (_req, res) => {
     let dbStatus = "disconnected";

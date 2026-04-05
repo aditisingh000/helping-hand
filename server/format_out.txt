@@ -1,0 +1,52 @@
+﻿
+C:\Users\singh\OneDrive\Desktop\helping-hand\server\src\controllers\auth.controller.ts
+   12:11  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   21:59  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   27:47  error  Unsafe argument of type `any` assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+   31:7   error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   32:7   error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   51:11  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   59:51  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+   66:43  error  Unsafe argument of type `any` assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+   97:13  error  'passwordHash' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+   97:27  error  'emailVerificationToken' is assigned a value but never used             @typescript-eslint/no-unused-vars
+   97:51  error  'passwordResetToken' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  110:59  error  Async arrow function 'logout' has no 'await' expression                 @typescript-eslint/require-await
+  119:67  error  Async arrow function 'getCurrentUser' has no 'await' expression         @typescript-eslint/require-await
+  123:11  error  'passwordHash' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  123:25  error  'emailVerificationToken' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  123:49  error  'passwordResetToken' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  158:11  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  166:51  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  192:11  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  201:16  error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  216:44  error  Unsafe argument of type `any` assigned to a parameter of type `string`  @typescript-eslint/no-unsafe-argument
+  219:5   error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  219:39  error  Unexpected any. Specify a different type                                @typescript-eslint/no-explicit-any
+  220:5   error  Unsafe assignment of an `any` value                                     @typescript-eslint/no-unsafe-assignment
+  220:41  error  Unexpected any. Specify a different type                                @typescript-eslint/no-explicit-any
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\server\src\controllers\user.controller.ts
+  66:11  error  Unsafe assignment of an `any` value                          @typescript-eslint/no-unsafe-assignment
+  71:29  error  Unsafe assignment of an `any` value                          @typescript-eslint/no-unsafe-assignment
+  72:28  error  Unsafe assignment of an `any` value                          @typescript-eslint/no-unsafe-assignment
+  73:40  error  Unsafe assignment of an `any` value                          @typescript-eslint/no-unsafe-assignment
+  78:13  error  'passwordHash' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  78:27  error  'emailVerificationToken' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  78:51  error  'passwordResetToken' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\server\src\middleware\auth.middleware.ts
+   5:23  error  'TokenPayload' is defined but never used           @typescript-eslint/no-unused-vars
+   9:3   error  ES2015 module syntax is preferred over namespaces  @typescript-eslint/no-namespace
+  26:7   error  Unsafe assignment of an `any` value                @typescript-eslint/no-unsafe-assignment
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\server\src\middleware\upload.middleware.ts
+  6:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  6:37  error  'Express' is not defined                  no-undef
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\server\src\utils\image.ts
+  15:59  error  'originalname' is defined but never used  @typescript-eslint/no-unused-vars
+  32:58  error  'originalname' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 39 problems (39 errors, 0 warnings)
+

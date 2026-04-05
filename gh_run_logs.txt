@@ -1,0 +1,30 @@
+Build & Test (20.x)	Check code formatting	﻿2026-04-05T03:12:27.3056951Z ##[group]Run npm run format:check --if-present
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.3061822Z [36;1mnpm run format:check --if-present[0m
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.3088221Z shell: /usr/bin/bash -e {0}
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.3088484Z ##[endgroup]
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.4180051Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.4180639Z > helping-hand@0.1.0 format:check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.4181167Z > npm run -ws --if-present format:check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.4181400Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.5647924Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.5648612Z > @helping-hand/client@0.1.0 format:check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.5649673Z > prettier . --check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.5649916Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:27.6500566Z Checking formatting...
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.1456479Z All matched files use Prettier code style!
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.1576657Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.1577542Z > @helping-hand/server@0.1.0 format:check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.1578100Z > prettier . --check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.1578359Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.2391937Z Checking formatting...
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.5215660Z [[33mwarn[39m] src/controllers/auth.controller.ts
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8312668Z [[33mwarn[39m] Code style issues found in the above file. Run Prettier with --write to fix.
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8459618Z npm error Lifecycle script `format:check` failed with error:
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8464278Z npm error code 1
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8466138Z npm error path /home/runner/work/helping-hand/helping-hand/server
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8466896Z npm error workspace @helping-hand/server@0.1.0
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8468148Z npm error location /home/runner/work/helping-hand/helping-hand/server
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8468901Z npm error command failed
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8469462Z npm error command sh -c prettier . --check
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8470307Z 
+Build & Test (20.x)	Check code formatting	2026-04-05T03:12:28.8601368Z ##[error]Process completed with exit code 1.

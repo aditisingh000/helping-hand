@@ -1,1 +1,37 @@
-﻿[{"conclusion":"failure","databaseId":23985130812,"headBranch":"phase-1-database-setup","name":"Continuous Integration","status":"completed"},{"conclusion":"success","databaseId":23985130810,"headBranch":"phase-1-database-setup","name":"Security Scanning","status":"completed"},{"conclusion":"success","databaseId":23984983091,"headBranch":"phase-1-database-setup","name":"Security Scanning","status":"completed"},{"conclusion":"failure","databaseId":23984983083,"headBranch":"phase-1-database-setup","name":"Continuous Integration","status":"completed"},{"conclusion":"success","databaseId":23933211759,"headBranch":"main","name":"Security Scanning","status":"completed"}]
+﻿[
+  {
+    "conclusion": "failure",
+    "databaseId": 23985130812,
+    "headBranch": "phase-1-database-setup",
+    "name": "Continuous Integration",
+    "status": "completed"
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 23985130810,
+    "headBranch": "phase-1-database-setup",
+    "name": "Security Scanning",
+    "status": "completed"
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 23984983091,
+    "headBranch": "phase-1-database-setup",
+    "name": "Security Scanning",
+    "status": "completed"
+  },
+  {
+    "conclusion": "failure",
+    "databaseId": 23984983083,
+    "headBranch": "phase-1-database-setup",
+    "name": "Continuous Integration",
+    "status": "completed"
+  },
+  {
+    "conclusion": "success",
+    "databaseId": 23933211759,
+    "headBranch": "main",
+    "name": "Security Scanning",
+    "status": "completed"
+  }
+]
