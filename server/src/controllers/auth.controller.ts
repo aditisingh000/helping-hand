@@ -2,7 +2,12 @@ import { Request, Response } from "express";
 
 import { AppDataSource } from "../config/data-source.js";
 import { User } from "../models/User.js";
-import { hashPassword, comparePassword, generateAccessToken, generateVerificationToken } from "../utils/auth.js";
+import {
+  hashPassword,
+  comparePassword,
+  generateAccessToken,
+  generateVerificationToken,
+} from "../utils/auth.js";
 import { sendVerificationEmail, sendPasswordResetEmail } from "../utils/email.js";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -39,7 +44,11 @@ export const register = async (req: Request, res: Response) => {
     // Send verification email
     await sendVerificationEmail(newUser.email, verificationToken);
 
-    res.status(201).json({ message: "Registration successful. Please check your email to verify your account." });
+    res
+      .status(201)
+      .json({
+        message: "Registration successful. Please check your email to verify your account.",
+      });
   } catch (error) {
     console.error("Register error:", error);
     res.status(500).json({ message: "Internal server error during registration" });
@@ -95,8 +104,13 @@ export const login = async (req: Request, res: Response) => {
     });
 
     // Don't send password hash back
-    const { passwordHash: _ph, emailVerificationToken: _evt, passwordResetToken: _prt, ...userSafeData } = user;
-    
+    const {
+      passwordHash: _ph,
+      emailVerificationToken: _evt,
+      passwordResetToken: _prt,
+      ...userSafeData
+    } = user;
+
     res.status(200).json({
       message: "Login successful",
       user: userSafeData,
@@ -120,9 +134,14 @@ export const logout = (req: Request, res: Response) => {
 export const getCurrentUser = (req: Request, res: Response) => {
   // If we reach this, it means auth middleware passed and attached req.user
   const user = req.user!;
-  
-  const { passwordHash: _ph, emailVerificationToken: _evt, passwordResetToken: _prt, ...userSafeData } = user;
-  
+
+  const {
+    passwordHash: _ph,
+    emailVerificationToken: _evt,
+    passwordResetToken: _prt,
+    ...userSafeData
+  } = user;
+
   res.status(200).json({ user: userSafeData });
 };
 
@@ -199,7 +218,7 @@ export const resetPassword = async (req: Request, res: Response) => {
 
     const userRepository = AppDataSource.getRepository(User);
     const user = await userRepository.findOne({
-      where: { passwordResetToken: token }
+      where: { passwordResetToken: token },
     });
 
     if (!user) {
@@ -215,16 +234,18 @@ export const resetPassword = async (req: Request, res: Response) => {
 
     // Set new password
     user.passwordHash = await hashPassword(newPassword);
-    
+
     // Clear reset token and expiration
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     user.passwordResetToken = null as any;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     user.passwordResetExpires = null as any;
-    
+
     await userRepository.save(user);
 
-    res.status(200).json({ message: "Password successfully reset. You can now log in with the new password." });
+    res
+      .status(200)
+      .json({ message: "Password successfully reset. You can now log in with the new password." });
   } catch (error) {
     console.error("Reset password error:", error);
     res.status(500).json({ message: "Internal server error" });

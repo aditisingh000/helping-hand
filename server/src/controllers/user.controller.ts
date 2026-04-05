@@ -14,7 +14,7 @@ export const getUserProfile = async (req: Request, res: Response) => {
     const userRepository = AppDataSource.getRepository(User);
     const user = await userRepository.findOne({
       where: { id },
-      select: ["id", "name", "bio", "avatarUrl", "locationAddress", "createdAt"], 
+      select: ["id", "name", "bio", "avatarUrl", "locationAddress", "createdAt"],
       // Only select public safe fields
     });
 
@@ -34,8 +34,12 @@ export const getUserProfile = async (req: Request, res: Response) => {
 
     // 3. Friends Count
     const friendRepo = AppDataSource.getRepository(Friendship);
-    const friendsCount = await friendRepo.createQueryBuilder("friendship")
-      .where("(friendship.userId = :id OR friendship.friendId = :id) AND friendship.status = 'active'", { id })
+    const friendsCount = await friendRepo
+      .createQueryBuilder("friendship")
+      .where(
+        "(friendship.userId = :id OR friendship.friendId = :id) AND friendship.status = 'active'",
+        { id },
+      )
       .getCount();
 
     res.status(200).json({
@@ -44,9 +48,8 @@ export const getUserProfile = async (req: Request, res: Response) => {
         hosted: hostedCount,
         attended: attendedCount,
         friends: friendsCount,
-      }
+      },
     });
-
   } catch (error) {
     console.error("Get user profile error:", error);
     res.status(500).json({ message: "Internal server error" });
@@ -64,10 +67,10 @@ export const updateProfile = async (req: Request, res: Response) => {
     }
 
     const { name, bio, locationAddress } = req.body;
-    
+
     // We update the user object we attached in middleware
     const user = req.user;
-    
+
     if (name !== undefined) user.name = name;
     if (bio !== undefined) user.bio = bio;
     if (locationAddress !== undefined) user.locationAddress = locationAddress;
@@ -75,7 +78,12 @@ export const updateProfile = async (req: Request, res: Response) => {
     const userRepository = AppDataSource.getRepository(User);
     await userRepository.save(user);
 
-    const { passwordHash: _ph, emailVerificationToken: _evt, passwordResetToken: _prt, ...userSafeData } = user;
+    const {
+      passwordHash: _ph,
+      emailVerificationToken: _evt,
+      passwordResetToken: _prt,
+      ...userSafeData
+    } = user;
 
     res.status(200).json({ message: "Profile updated successfully", user: userSafeData });
   } catch (error) {
@@ -103,7 +111,7 @@ export const uploadAvatar = async (req: Request, res: Response) => {
 
     const user = req.user;
     user.avatarUrl = avatarUrl;
-    
+
     const userRepository = AppDataSource.getRepository(User);
     await userRepository.save(user);
 

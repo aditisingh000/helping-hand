@@ -32,7 +32,9 @@ const ResetPassword = () => {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Failed to request reset");
 
-      setSuccess("If that email exists, we've sent a password reset link. Please check your inbox.");
+      setSuccess(
+        "If that email exists, we've sent a password reset link. Please check your inbox.",
+      );
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -73,12 +75,10 @@ const ResetPassword = () => {
   return (
     <div className="auth-container">
       <div className="auth-card fade-in">
-        <h1 className="auth-title">
-          {isRequestMode ? "Reset Password" : "Set New Password"}
-        </h1>
+        <h1 className="auth-title">{isRequestMode ? "Reset Password" : "Set New Password"}</h1>
         <p className="auth-subtitle">
-          {isRequestMode 
-            ? "Enter your email to receive a reset link" 
+          {isRequestMode
+            ? "Enter your email to receive a reset link"
             : "Enter a strong new password for your account"}
         </p>
 

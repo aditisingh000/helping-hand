@@ -41,14 +41,20 @@ const VerifyEmail = () => {
     <div className="auth-container">
       <div className="auth-card fade-in">
         <h1 className="auth-title">Email Verification</h1>
-        
-        {status === "loading" && <p className="auth-subtitle">Verifying your email, please wait...</p>}
-        
+
+        {status === "loading" && (
+          <p className="auth-subtitle">Verifying your email, please wait...</p>
+        )}
+
         {status === "success" && (
           <>
             <div className="auth-success fade-in">{message}</div>
             <div className="auth-footer" style={{ marginTop: 0 }}>
-              <Link to="/login" className="auth-button" style={{ display: 'block', textDecoration: 'none' }}>
+              <Link
+                to="/login"
+                className="auth-button"
+                style={{ display: "block", textDecoration: "none" }}
+              >
                 Proceed to Login
               </Link>
             </div>

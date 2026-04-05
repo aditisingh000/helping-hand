@@ -23,7 +23,7 @@ interface ProfileData {
 const Profile = () => {
   const { id } = useParams<{ id: string }>();
   const { user: currentUser } = useAuth();
-  
+
   // If no param, assume we want our own profile
   const targetId = id || currentUser?.id;
 
@@ -72,13 +72,13 @@ const Profile = () => {
       });
       if (!res.ok) throw new Error("Failed to upload avatar");
       const data = await res.json();
-      
+
       // Update local state
       setProfile((prev) => {
         if (!prev) return prev;
         return {
           ...prev,
-          user: { ...prev.user, avatarUrl: data.avatarUrl }
+          user: { ...prev.user, avatarUrl: data.avatarUrl },
         };
       });
     } catch (err) {
@@ -95,13 +95,13 @@ const Profile = () => {
         body: JSON.stringify({ name: editName, bio: editBio }),
       });
       if (!res.ok) throw new Error("Failed to update profile");
-      
+
       // Refresh local state
       setProfile((prev) => {
         if (!prev) return prev;
         return {
           ...prev,
-          user: { ...prev.user, name: editName, bio: editBio }
+          user: { ...prev.user, name: editName, bio: editBio },
         };
       });
       setIsEditing(false);
@@ -111,22 +111,38 @@ const Profile = () => {
     }
   };
 
-  if (loading) return <div style={{color:"white", textAlign:"center", padding:"50px"}}>Loading profile...</div>;
-  if (error || !profile) return <div style={{color:"#FF6B6B", textAlign:"center", padding:"50px"}}>{error || "Profile not found"}</div>;
+  if (loading)
+    return (
+      <div style={{ color: "white", textAlign: "center", padding: "50px" }}>Loading profile...</div>
+    );
+  if (error || !profile)
+    return (
+      <div style={{ color: "#FF6B6B", textAlign: "center", padding: "50px" }}>
+        {error || "Profile not found"}
+      </div>
+    );
 
   return (
     <div className="profile-container fade-in">
       <div className="profile-header">
         <div className="profile-avatar-wrapper">
-          <img 
-            src={profile.user.avatarUrl || "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"} 
-            alt="Profile Avatar" 
-            className="profile-avatar" 
+          <img
+            src={
+              profile.user.avatarUrl ||
+              "https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+            }
+            alt="Profile Avatar"
+            className="profile-avatar"
           />
           {isOwnProfile && (
             <label className="avatar-upload-label" title="Change Avatar">
               📷
-              <input type="file" style={{ display: "none" }} accept="image/*" onChange={handleAvatarChange} />
+              <input
+                type="file"
+                style={{ display: "none" }}
+                accept="image/*"
+                onChange={handleAvatarChange}
+              />
             </label>
           )}
         </div>
@@ -136,7 +152,7 @@ const Profile = () => {
             <>
               <h1 className="profile-name">{profile.user.name}</h1>
               <p className="profile-bio">{profile.user.bio || "No bio provided yet."}</p>
-              
+
               <div className="profile-stats">
                 <div className="stat-box">
                   <div className="stat-number">{profile.stats.hosted}</div>
@@ -160,21 +176,25 @@ const Profile = () => {
             </>
           ) : (
             <div className="edit-form">
-              <input 
-                type="text" 
-                value={editName} 
-                onChange={e => setEditName(e.target.value)} 
+              <input
+                type="text"
+                value={editName}
+                onChange={(e) => setEditName(e.target.value)}
                 placeholder="Your Name"
               />
-              <textarea 
-                value={editBio} 
-                onChange={e => setEditBio(e.target.value)} 
-                placeholder="Tell us about yourself..." 
+              <textarea
+                value={editBio}
+                onChange={(e) => setEditBio(e.target.value)}
+                placeholder="Tell us about yourself..."
                 rows={4}
               />
               <div className="edit-actions">
-                <button className="btn-save" onClick={handleSaveProfile}>Save Changes</button>
-                <button className="btn-cancel" onClick={() => setIsEditing(false)}>Cancel</button>
+                <button className="btn-save" onClick={handleSaveProfile}>
+                  Save Changes
+                </button>
+                <button className="btn-cancel" onClick={() => setIsEditing(false)}>
+                  Cancel
+                </button>
               </div>
             </div>
           )}

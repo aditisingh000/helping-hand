@@ -53,7 +53,7 @@ export default [
       "@typescript-eslint/no-misused-promises": "off",
       "@typescript-eslint/no-floating-promises": "off",
       "@typescript-eslint/require-await": "off",
-      "no-undef": "off"
+      "no-undef": "off",
     },
   },
   {

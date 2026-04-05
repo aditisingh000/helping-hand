@@ -45,7 +45,8 @@ const Register = () => {
         {error && <div className="auth-error">{error}</div>}
         {success && (
           <div className="auth-success fade-in">
-            Registration successful! Please check your email inbox to verify your account before logging in.
+            Registration successful! Please check your email inbox to verify your account before
+            logging in.
           </div>
         )}
 

@@ -9,8 +9,6 @@ import { AppDataSource } from "./config/data-source.js";
 import authRoutes from "./routes/auth.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
-
-
 export function createApp() {
   const app = express();
 
@@ -41,7 +39,12 @@ export function createApp() {
   // lgtm [js/missing-csrf-middleware]
   // codeql[js/missing-csrf-middleware]
   app.use(cookieParser(process.env.COOKIE_SECRET || "fallback_secret_key_991283"));
-  app.use(csurf({ cookie: { signed: true }, ignoreMethods: ["GET", "HEAD", "OPTIONS", "POST", "PUT", "DELETE", "PATCH"] }));
+  app.use(
+    csurf({
+      cookie: { signed: true },
+      ignoreMethods: ["GET", "HEAD", "OPTIONS", "POST", "PUT", "DELETE", "PATCH"],
+    }),
+  );
 
   app.use("/api/auth", authRoutes);
   app.use("/api/users", userRoutes);
