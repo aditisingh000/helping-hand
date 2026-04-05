@@ -82,4 +82,4 @@ async function seed() {
   }
 }
 
-seed();
+seed().catch(console.error);

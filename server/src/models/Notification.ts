@@ -1,3 +1,4 @@
+import { IsUUID, IsString, IsBoolean, IsDate, IsOptional, MaxLength } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -6,9 +7,9 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
-import { IsUUID, IsString, IsBoolean, IsDate, IsOptional, MaxLength } from "class-validator";
-import { User } from "./User.js";
+
 import { Event } from "./Event.js";
+import { User } from "./User.js";
 
 @Entity("notifications")
 export class Notification {

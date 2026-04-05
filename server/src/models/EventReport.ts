@@ -1,3 +1,4 @@
+import { IsUUID, IsString, IsOptional, IsDate, MaxLength } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -7,9 +8,9 @@ import {
   JoinColumn,
   Unique,
 } from "typeorm";
-import { IsUUID, IsString, IsOptional, IsDate, MaxLength } from "class-validator";
-import { User } from "./User.js";
+
 import { Event } from "./Event.js";
+import { User } from "./User.js";
 
 @Entity("event_reports")
 @Unique(["eventId", "reportedBy"])

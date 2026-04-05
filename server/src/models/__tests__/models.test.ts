@@ -1,14 +1,15 @@
 import { describe, it, expect } from "@jest/globals";
 import "reflect-metadata";
 import { validate } from "class-validator";
-import { User } from "../User.js";
-import { Event } from "../Event.js";
-import { RSVP } from "../RSVP.js";
+
 import { Comment } from "../Comment.js";
-import { Notification } from "../Notification.js";
+import { Event } from "../Event.js";
 import { EventCategory } from "../EventCategory.js";
 import { EventReport } from "../EventReport.js";
 import { Friendship } from "../Friendship.js";
+import { Notification } from "../Notification.js";
+import { RSVP } from "../RSVP.js";
+import { User } from "../User.js";
 import { UserPreference } from "../UserPreference.js";
 
 describe("Database Models Validation", () => {

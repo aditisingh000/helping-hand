@@ -1,14 +1,4 @@
 import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  CreateDateColumn,
-  UpdateDateColumn,
-  ManyToOne,
-  JoinColumn,
-  OneToMany,
-} from "typeorm";
-import {
   IsUUID,
   IsString,
   IsInt,
@@ -18,9 +8,20 @@ import {
   MaxLength,
   Min,
 } from "class-validator";
-import { User } from "./User.js";
-import { RSVP } from "./RSVP.js";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
+  OneToMany,
+} from "typeorm";
+
 import { Comment } from "./Comment.js";
+import { RSVP } from "./RSVP.js";
+import { User } from "./User.js";
 
 @Entity("events")
 export class Event {
@@ -55,6 +56,7 @@ export class Event {
     srid: 4326,
   })
   @IsOptional()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   location: any;
 
   @Column({ name: "location_address", length: 500 })

@@ -1,3 +1,4 @@
+import { IsUUID, IsString, IsOptional, IsBoolean, IsDate } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -8,9 +9,9 @@ import {
   JoinColumn,
   OneToMany,
 } from "typeorm";
-import { IsUUID, IsString, IsOptional, IsBoolean, IsDate } from "class-validator";
-import { User } from "./User.js";
+
 import { Event } from "./Event.js";
+import { User } from "./User.js";
 
 @Entity("comments")
 export class Comment {

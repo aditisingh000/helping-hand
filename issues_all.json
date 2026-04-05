@@ -1,0 +1,849 @@
+﻿[
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 77,
+    "state": "OPEN",
+    "title": "Implement Friend Suggestions"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 76,
+    "state": "OPEN",
+    "title": "Create Event Popup/InfoWindow"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 75,
+    "state": "OPEN",
+    "title": "Set Up Backup and Recovery"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 74,
+    "state": "OPEN",
+    "title": "Set Up Production Deployment"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 73,
+    "state": "OPEN",
+    "title": "Set Up Production Environment"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 72,
+    "state": "OPEN",
+    "title": "Create Developer Documentation"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 71,
+    "state": "OPEN",
+    "title": "Create User Documentation"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 70,
+    "state": "OPEN",
+    "title": "Create API Documentation"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 69,
+    "state": "OPEN",
+    "title": "Add Analytics"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 68,
+    "state": "OPEN",
+    "title": "Implement Application Monitoring"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 67,
+    "state": "OPEN",
+    "title": "Set Up Error Tracking"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 66,
+    "state": "OPEN",
+    "title": "Write Mobile App Tests"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 65,
+    "state": "OPEN",
+    "title": "Write E2E Tests"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 64,
+    "state": "OPEN",
+    "title": "Write Frontend Unit Tests"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 63,
+    "state": "OPEN",
+    "title": "Write Backend Unit Tests"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 62,
+    "state": "OPEN",
+    "title": "Implement Content Moderation"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 61,
+    "state": "OPEN",
+    "title": "Add Input Validation and Sanitization"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 60,
+    "state": "OPEN",
+    "title": "Implement Security Best Practices"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 59,
+    "state": "OPEN",
+    "title": "Add Adjustable Text Sizes"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 58,
+    "state": "OPEN",
+    "title": "Implement High Contrast Mode"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 57,
+    "state": "OPEN",
+    "title": "Add Screen Reader Support"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 56,
+    "state": "OPEN",
+    "title": "Implement WCAG 2.1 AA Compliance"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 55,
+    "state": "OPEN",
+    "title": "Implement CDN for Static Assets"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 54,
+    "state": "OPEN",
+    "title": "Optimize Frontend Performance"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 53,
+    "state": "OPEN",
+    "title": "Implement Redis Caching"
+  },
+  {
+    "milestone": {
+      "number": 5,
+      "title": "Phase 5: Polish & Scale (Weeks 17-20)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 52,
+    "state": "OPEN",
+    "title": "Optimize Database Queries"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 51,
+    "state": "OPEN",
+    "title": "Prepare App Store Submission"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 50,
+    "state": "OPEN",
+    "title": "Create Mobile App Icons and Splash Screen"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 49,
+    "state": "OPEN",
+    "title": "Implement Mobile Location Services"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 48,
+    "state": "OPEN",
+    "title": "Implement Mobile Image Upload"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 47,
+    "state": "OPEN",
+    "title": "Implement Push Notifications"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 46,
+    "state": "OPEN",
+    "title": "Create Mobile Events List Screen"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 45,
+    "state": "OPEN",
+    "title": "Create Mobile Profile Screen"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 44,
+    "state": "OPEN",
+    "title": "Create Mobile Create Event Screen"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 43,
+    "state": "OPEN",
+    "title": "Create Mobile Event Detail Screen"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 42,
+    "state": "OPEN",
+    "title": "Create Mobile Home Screen (Map)"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 41,
+    "state": "OPEN",
+    "title": "Create Mobile Navigation"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 40,
+    "state": "OPEN",
+    "title": "Set Up Mobile Maps"
+  },
+  {
+    "milestone": {
+      "number": 4,
+      "title": "Phase 4: Mobile App (Weeks 13-16)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 39,
+    "state": "OPEN",
+    "title": "Set Up React Native Project"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 38,
+    "state": "OPEN",
+    "title": "Implement User Activity Feed"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 37,
+    "state": "OPEN",
+    "title": "Enhance User Profile Page"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 36,
+    "state": "OPEN",
+    "title": "Implement Email Notifications"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 35,
+    "state": "OPEN",
+    "title": "Implement Real-time Notifications"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 34,
+    "state": "OPEN",
+    "title": "Create Notifications Page"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 33,
+    "state": "OPEN",
+    "title": "Implement Notification System"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 32,
+    "state": "OPEN",
+    "title": "Implement Real-time Comment Updates"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 31,
+    "state": "OPEN",
+    "title": "Create Comment UI Components"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 30,
+    "state": "OPEN",
+    "title": "Implement Comment API"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 29,
+    "state": "OPEN",
+    "title": "Create Friends Page"
+  },
+  {
+    "milestone": {
+      "number": 3,
+      "title": "Phase 3: Social Features (Weeks 9-12)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 28,
+    "state": "OPEN",
+    "title": "Implement Friend Request API"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 27,
+    "state": "OPEN",
+    "title": "Create Event List View"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 26,
+    "state": "OPEN",
+    "title": "Implement Event Search"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 25,
+    "state": "OPEN",
+    "title": "Implement Event Capacity Management"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 24,
+    "state": "OPEN",
+    "title": "Create RSVP UI Components"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 23,
+    "state": "OPEN",
+    "title": "Implement RSVP API"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 22,
+    "state": "OPEN",
+    "title": "Implement Event Image Upload"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 21,
+    "state": "OPEN",
+    "title": "Create Event Detail Page"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 20,
+    "state": "OPEN",
+    "title": "Create Event Creation Form"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 19,
+    "state": "OPEN",
+    "title": "Create Event API Endpoints"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 18,
+    "state": "OPEN",
+    "title": "Implement Map Filtering"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 17,
+    "state": "OPEN",
+    "title": "Implement Event Pin Display"
+  },
+  {
+    "milestone": {
+      "number": 2,
+      "title": "Phase 2: Core Features (Weeks 5-8)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 16,
+    "state": "OPEN",
+    "title": "Integrate Google Maps API"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 15,
+    "state": "OPEN",
+    "title": "Implement Profile Image Upload"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 14,
+    "state": "OPEN",
+    "title": "Create User Profile Page"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 13,
+    "state": "OPEN",
+    "title": "Create User Profile API"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 12,
+    "state": "OPEN",
+    "title": "Implement Email Verification"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 11,
+    "state": "OPEN",
+    "title": "Implement Password Reset"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 10,
+    "state": "OPEN",
+    "title": "Implement User Login"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 9,
+    "state": "OPEN",
+    "title": "Implement User Registration"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 8,
+    "state": "OPEN",
+    "title": "Implement Database Models/Entities"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 7,
+    "state": "OPEN",
+    "title": "Set Up Database Connection Pooling"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 6,
+    "state": "OPEN",
+    "title": "Create Database Schema"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 5,
+    "state": "CLOSED",
+    "title": "Set Up CI/CD Pipeline"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 4,
+    "state": "CLOSED",
+    "title": "Configure Frontend Build System"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 3,
+    "state": "CLOSED",
+    "title": "Configure Backend Build System"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 2,
+    "state": "CLOSED",
+    "title": "Set Up Development Environment"
+  },
+  {
+    "milestone": {
+      "number": 1,
+      "title": "Phase 1: Foundation (Weeks 1-4)",
+      "description": "",
+      "dueOn": null
+    },
+    "number": 1,
+    "state": "CLOSED",
+    "title": "Initialize Project Repository Structure"
+  }
+]

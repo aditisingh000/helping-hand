@@ -1,3 +1,4 @@
+import { IsUUID, IsString, IsDate, MaxLength } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -9,7 +10,7 @@ import {
   Unique,
   Check,
 } from "typeorm";
-import { IsUUID, IsString, IsDate, MaxLength } from "class-validator";
+
 import { User } from "./User.js";
 
 @Entity("friendships")

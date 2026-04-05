@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+
 import { AppDataSource } from "./config/data-source.js";
 
 export function createApp() {
@@ -37,7 +38,7 @@ export function createApp() {
         await AppDataSource.query("SELECT 1");
         dbStatus = "connected";
       }
-    } catch (err) {
+    } catch {
       dbStatus = "error";
     }
 

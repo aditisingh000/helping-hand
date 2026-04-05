@@ -1,8 +1,9 @@
 import "reflect-metadata";
-import { DataSource } from "typeorm";
-import * as dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+
+import * as dotenv from "dotenv";
+import { DataSource } from "typeorm";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

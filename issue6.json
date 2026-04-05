@@ -1,0 +1,4 @@
+﻿{
+  "body": "- Implement all database tables from schema\n- Set up PostGIS extension\n- Create indexes for performance\n- Set up database migrations system (TypeORM/Knex)\n- Create seed data scripts\n\n**Acceptance Criteria:**\n- [x] All tables created\n- [x] PostGIS extension enabled\n- [x] Indexes created\n- [x] Migration system working\n- [x] Seed data script functional",
+  "state": "OPEN"
+}

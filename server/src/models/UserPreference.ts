@@ -1,3 +1,4 @@
+import { IsUUID, IsInt, IsOptional, IsBoolean, IsDate, IsArray, IsString } from "class-validator";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -7,7 +8,7 @@ import {
   OneToOne,
   JoinColumn,
 } from "typeorm";
-import { IsUUID, IsInt, IsOptional, IsBoolean, IsDate, IsArray, IsString } from "class-validator";
+
 import { User } from "./User.js";
 
 @Entity("user_preferences")

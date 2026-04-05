@@ -13,7 +13,7 @@ const connectWithRetry = async (retries = 5, delay = 2000) => {
       await AppDataSource.initialize();
       console.log("Database initialized successfully!");
       return true;
-    } catch (err) {
+    } catch {
       console.error(
         `Database connection failed. Retrying in ${delay / 1000}s... (${i + 1}/${retries})`,
       );
@@ -27,8 +27,10 @@ const connectWithRetry = async (retries = 5, delay = 2000) => {
   }
 };
 
-connectWithRetry().then(() => {
-  app.listen(port, () => {
-    console.log(`HelpingHand API listening on http://localhost:${port}`);
-  });
-});
+connectWithRetry()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`HelpingHand API listening on http://localhost:${port}`);
+    });
+  })
+  .catch(console.error);

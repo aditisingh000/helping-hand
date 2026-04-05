@@ -1,0 +1,299 @@
+﻿Build & Test (20.x)	UNKNOWN STEP	∩╗┐2026-04-04T18:39:24.6364444Z Current runner version: '2.333.1'
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6390322Z ##[group]Runner Image Provisioner
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6391108Z Hosted Compute Agent
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6391632Z Version: 20260213.493
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6392315Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6392981Z Build Date: 2026-02-13T00:28:41Z
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6393824Z Worker ID: {ee5659ce-4e7f-4c7c-a780-0979332cd724}
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6394551Z Azure Region: westus
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6395122Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6396837Z ##[group]Operating System
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6397518Z Ubuntu
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6397943Z 24.04.4
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6398430Z LTS
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6398883Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6399434Z ##[group]Runner Image
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6399977Z Image: ubuntu-24.04
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6400472Z Version: 20260329.72.1
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6401611Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6403179Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6404320Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6405412Z ##[group]GITHUB_TOKEN Permissions
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6407561Z Contents: read
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6408109Z Metadata: read
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6408593Z Packages: read
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6409205Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6411454Z Secret source: Actions
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6412469Z Prepare workflow directory
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6763275Z Prepare all required actions
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:24.6804918Z Getting action download info
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.1131535Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.2755736Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5203129Z Complete job name: Build & Test (20.x)
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5885562Z ##[group]Run actions/checkout@v4
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5886413Z with:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5886838Z   repository: aditisingh000/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5887582Z   token: ***
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5887968Z   ssh-strict: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5888358Z   ssh-user: git
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5888743Z   persist-credentials: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5889187Z   clean: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5889571Z   sparse-checkout-cone-mode: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5890044Z   fetch-depth: 1
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5890425Z   fetch-tags: false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5890823Z   show-progress: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5891212Z   lfs: false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5891572Z   submodules: false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5891968Z   set-safe-directory: true
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.5892616Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7122069Z Syncing repository: aditisingh000/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7125473Z ##[group]Getting Git version info
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7126764Z Working directory is '/home/runner/work/helping-hand/helping-hand'
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7128498Z [command]/usr/bin/git version
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7136325Z git version 2.53.0
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7164688Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7183097Z Temporarily overriding HOME='/home/runner/work/_temp/91165bbe-c4aa-49fd-912e-a9e31f4b9d4d' before making global git config changes
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7185643Z Adding repository directory to the temporary git global config as a safe directory
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7188784Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/helping-hand/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7224512Z Deleting the contents of '/home/runner/work/helping-hand/helping-hand'
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7229633Z ##[group]Initializing the repository
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7234622Z [command]/usr/bin/git init /home/runner/work/helping-hand/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7320608Z hint: Using 'master' as the name for the initial branch. This default branch name
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7324226Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7325833Z hint: to use in all of your new repositories, which will suppress this warning,
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7327414Z hint: call:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7328190Z hint:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7329014Z hint: 	git config --global init.defaultBranch <name>
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7329994Z hint:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7330917Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7332508Z hint: 'development'. The just-created branch can be renamed via this command:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7334113Z hint:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7334807Z hint: 	git branch -m <name>
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7335675Z hint:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7336711Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7338497Z Initialized empty Git repository in /home/runner/work/helping-hand/helping-hand/.git/
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7341740Z [command]/usr/bin/git remote add origin https://github.com/aditisingh000/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7369281Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7370520Z ##[group]Disabling automatic garbage collection
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7373690Z [command]/usr/bin/git config --local gc.auto 0
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7411274Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7412779Z ##[group]Setting up auth
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7421382Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7458784Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7829943Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.7859108Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8090569Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8133448Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8363358Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8399078Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8400376Z ##[group]Fetching the repository
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:25.8409827Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +64240eabf1f40d4854ddbab1be10c0037ce539b6:refs/remotes/pull/79/merge
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2669118Z From https://github.com/aditisingh000/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2671013Z  * [new ref]         64240eabf1f40d4854ddbab1be10c0037ce539b6 -> pull/79/merge
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2711973Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2713887Z ##[group]Determining the checkout info
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2715640Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2721896Z [command]/usr/bin/git sparse-checkout disable
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2774422Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2810250Z ##[group]Checking out the ref
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2816708Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/79/merge
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2956148Z Note: switching to 'refs/remotes/pull/79/merge'.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2957335Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2958204Z You are in 'detached HEAD' state. You can look around, make experimental
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2960324Z changes and commit them, and you can discard any commits you make in this
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2961872Z state without impacting any branches by switching back to a branch.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2962613Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2963097Z If you want to create a new branch to retain commits you create, you may
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2964776Z do so (now or later) by using -c with the switch command. Example:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2965614Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2965949Z   git switch -c <new-branch-name>
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2966361Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2966584Z Or undo this operation with:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2967291Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2967493Z   git switch -
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2967848Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2968295Z Turn off this advice by setting config variable advice.detachedHead to false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2968963Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2969688Z HEAD is now at 64240ea Merge f9d1798f3cf7cf339443bfe80e00087befc13c20 into e2e9f0c519153a57b3013be5713c37efbf985e98
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.2972372Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3005034Z [command]/usr/bin/git log -1 --format=%H
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3030593Z 64240eabf1f40d4854ddbab1be10c0037ce539b6
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3309059Z ##[group]Run actions/setup-node@v4
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3309666Z with:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3310065Z   node-version: 20.x
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3310487Z   cache: npm
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3310866Z   always-auth: false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3311293Z   check-latest: false
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3311888Z   token: ***
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.3312301Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.5427502Z Found in cache @ /opt/hostedtoolcache/node/20.20.2/x64
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:26.5436294Z ##[group]Environment details
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.4011305Z node: v20.20.2
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.4011920Z npm: 10.8.2
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.4012338Z yarn: 1.22.22
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.4014655Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.4038437Z [command]/opt/hostedtoolcache/node/20.20.2/x64/bin/npm config get cache
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.5622917Z /home/runner/.npm
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.8592607Z npm cache is not found
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.8820306Z ##[group]Run npm ci
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.8820640Z [36;1mnpm ci[0m
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.8859686Z shell: /usr/bin/bash -e {0}
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:29.8859989Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:34.1850734Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:35.5969913Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:36.2625055Z npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9333351Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9334348Z added 661 packages, and audited 665 packages in 9s
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9334845Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9335170Z 187 packages are looking for funding
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9335532Z   run `npm fund` for details
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9393802Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9394353Z 5 vulnerabilities (1 moderate, 3 high, 1 critical)
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9394869Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9395128Z To address all issues, run:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9395604Z   npm audit fix
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9395876Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9396117Z Run `npm audit` for details.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9727780Z ##[group]Run npm run format:check --if-present
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9728186Z [36;1mnpm run format:check --if-present[0m
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9756028Z shell: /usr/bin/bash -e {0}
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:38.9756308Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.0928798Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.0929460Z > helping-hand@0.1.0 format:check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.0930259Z > npm run -ws --if-present format:check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.0930637Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.2312538Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.2313244Z > @helping-hand/client@0.1.0 format:check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.2314048Z > prettier . --check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.2314248Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.3222086Z Checking formatting...
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.6288790Z All matched files use Prettier code style!
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.6384488Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.6385418Z > @helping-hand/server@0.1.0 format:check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.6385996Z > prettier . --check
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.6386222Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:39.7268096Z Checking formatting...
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.2044680Z All matched files use Prettier code style!
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.2400802Z ##[group]Run npm run lint --if-present
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.2401117Z [36;1mnpm run lint --if-present[0m
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.2427698Z shell: /usr/bin/bash -e {0}
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.2427941Z ##[endgroup]
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.3577063Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.3577630Z > helping-hand@0.1.0 lint
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.3578071Z > npm run -ws --if-present lint
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.3578296Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.5037255Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.5038175Z > @helping-hand/client@0.1.0 lint
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.5038716Z > eslint .
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:40.5038908Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:43.9030364Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:43.9030933Z > @helping-hand/server@0.1.0 lint
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:43.9031411Z > eslint .
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:43.9031570Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1595724Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1598193Z /home/runner/work/helping-hand/helping-hand/server/jest.config.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1600028Z   0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1601668Z The file was not found in any of the provided project(s): jest.config.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1603112Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1605049Z /home/runner/work/helping-hand/helping-hand/server/src/app.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1664461Z ##[warning]   2:1   warning  There should be at least one empty line between import groups  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1675976Z ##[error]  40:14  error    'err' is defined but never used                                @typescript-eslint/no-unused-vars
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1678743Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1680572Z /home/runner/work/helping-hand/helping-hand/server/src/config/data-source.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1683384Z ##[warning]  2:1  warning  `typeorm` import should occur after import of `url`            import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1687183Z ##[warning]  3:1  warning  There should be at least one empty line between import groups  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1714784Z ##[warning]  3:1  warning  `dotenv` import should occur after import of `url`             import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1717553Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1719355Z /home/runner/work/helping-hand/helping-hand/server/src/index.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1722551Z ##[error]  16:14  error  'err' is defined but never used                                                                                                                                     @typescript-eslint/no-unused-vars
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1728069Z ##[error]  30:1   error  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1731417Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1733238Z /home/runner/work/helping-hand/helping-hand/server/src/models/Comment.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1736266Z ##[warning]  11:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1739786Z ##[warning]  11:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1743260Z ##[warning]  13:1  warning  `./Event.js` import should occur before import of `./User.js`     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1746139Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1747869Z /home/runner/work/helping-hand/helping-hand/server/src/models/Event.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1750522Z ##[warning]  11:1   warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1754309Z ##[warning]  11:1   warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1758091Z ##[warning]  22:1   warning  `./RSVP.js` import should occur before import of `./User.js`      import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1761709Z ##[warning]  23:1   warning  `./Comment.js` import should occur before import of `./User.js`   import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1765774Z ##[error]  58:13  error    Unexpected any. Specify a different type                          @typescript-eslint/no-explicit-any
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1769054Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1772812Z /home/runner/work/helping-hand/helping-hand/server/src/models/EventCategory.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1776594Z ##[warning]  2:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1781483Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1782017Z /home/runner/work/helping-hand/helping-hand/server/src/models/EventReport.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1783690Z ##[warning]  10:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1786036Z ##[warning]  10:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1788226Z ##[warning]  12:1  warning  `./Event.js` import should occur before import of `./User.js`     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1789486Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1789954Z /home/runner/work/helping-hand/helping-hand/server/src/models/Friendship.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1791275Z ##[warning]  12:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1793680Z ##[warning]  12:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1795194Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1795690Z /home/runner/work/helping-hand/helping-hand/server/src/models/Notification.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1797114Z ##[warning]   9:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1799375Z ##[warning]   9:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1801564Z ##[warning]  11:1  warning  `./Event.js` import should occur before import of `./User.js`     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1802862Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1803295Z /home/runner/work/helping-hand/helping-hand/server/src/models/RSVP.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1804894Z ##[warning]  11:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1807175Z ##[warning]  11:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1809372Z ##[warning]  13:1  warning  `./Event.js` import should occur before import of `./User.js`     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1810677Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1811134Z /home/runner/work/helping-hand/helping-hand/server/src/models/User.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1812453Z ##[warning]   9:1   warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1814884Z ##[warning]   9:1   warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1817121Z ##[error]  59:13  error    Unexpected any. Specify a different type                          @typescript-eslint/no-explicit-any
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1818508Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1819022Z /home/runner/work/helping-hand/helping-hand/server/src/models/UserPreference.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1820448Z ##[warning]  10:1  warning  There should be at least one empty line between import groups     import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1822651Z ##[warning]  10:1  warning  `class-validator` import should occur before import of `typeorm`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1824277Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1824872Z /home/runner/work/helping-hand/helping-hand/server/src/models/__tests__/models.test.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1826569Z ##[warning]  3:1  warning  There should be at least one empty line between import groups                import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1828934Z ##[warning]  4:1  warning  `../User.js` import should occur after import of `../Friendship.js`          import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1831258Z ##[warning]  5:1  warning  `../Event.js` import should occur after import of `../Comment.js`            import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1833891Z ##[warning]  6:1  warning  `../RSVP.js` import should occur after import of `../Friendship.js`          import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1836837Z ##[warning]  8:1  warning  `../Notification.js` import should occur after import of `../Friendship.js`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1838493Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1839000Z /home/runner/work/helping-hand/helping-hand/server/src/repositories/index.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1840743Z ##[warning]  2:1  warning  `../models/User.js` import should occur after import of `../models/EventReport.js`            import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1843433Z ##[warning]  3:1  warning  `../models/Event.js` import should occur after import of `../models/Comment.js`               import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1846443Z ##[warning]  4:1  warning  `../models/RSVP.js` import should occur after import of `../models/EventReport.js`            import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1849241Z ##[warning]  6:1  warning  `../models/Friendship.js` import should occur after import of `../models/EventReport.js`      import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1851994Z ##[warning]  7:1  warning  `../models/Notification.js` import should occur after import of `../models/EventReport.js`    import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1930497Z ##[warning]  9:1  warning  `../models/UserPreference.js` import should occur after import of `../models/EventReport.js`  import/order
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1932453Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1932987Z /home/runner/work/helping-hand/helping-hand/server/src/scripts/seed.ts
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1936326Z ##[error]  85:1  error  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1938613Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1939203Z Γ£û 45 problems (7 errors, 38 warnings)
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1939919Z   0 errors and 38 warnings potentially fixable with the `--fix` option.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.1940385Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2559211Z npm error Lifecycle script `lint` failed with error:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2564727Z npm error code 1
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2566638Z npm error path /home/runner/work/helping-hand/helping-hand/server
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2567798Z npm error workspace @helping-hand/server@0.1.0
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2569937Z npm error location /home/runner/work/helping-hand/helping-hand/server
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2570606Z npm error command failed
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2571282Z npm error command sh -c eslint .
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2571569Z 
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2703631Z ##[error]Process completed with exit code 1.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.2827186Z Post job cleanup.
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3830549Z [command]/usr/bin/git version
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3870174Z git version 2.53.0
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3916469Z Temporarily overriding HOME='/home/runner/work/_temp/760c71bf-7c2a-4b14-b5b3-3fffb825eabe' before making global git config changes
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3917623Z Adding repository directory to the temporary git global config as a safe directory
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3932333Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/helping-hand/helping-hand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.3971836Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4007730Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4248585Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4272750Z http.https://github.com/.extraheader
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4286985Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4319803Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4551911Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4587861Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.4985978Z Cleaning up orphan processes
+Build & Test (20.x)	UNKNOWN STEP	2026-04-04T18:39:47.5321943Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

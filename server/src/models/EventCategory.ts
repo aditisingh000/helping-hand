@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
 import { IsUUID, IsString, IsOptional, IsDate, MaxLength } from "class-validator";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
 
 @Entity("event_categories")
 export class EventCategory {

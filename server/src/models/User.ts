@@ -1,12 +1,4 @@
 import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  CreateDateColumn,
-  UpdateDateColumn,
-  OneToMany,
-} from "typeorm";
-import {
   IsUUID,
   IsEmail,
   IsString,
@@ -15,6 +7,15 @@ import {
   IsDate,
   MaxLength,
 } from "class-validator";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  CreateDateColumn,
+  UpdateDateColumn,
+  OneToMany,
+} from "typeorm";
+
 import { Event } from "./Event.js";
 import { RSVP } from "./RSVP.js";
 
@@ -56,6 +57,7 @@ export class User {
     nullable: true,
   })
   @IsOptional()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   location: any;
 
   @Column({ name: "location_address", length: 500, nullable: true })

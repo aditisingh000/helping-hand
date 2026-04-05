@@ -1,13 +1,13 @@
 import { AppDataSource } from "../config/data-source.js";
-import { User } from "../models/User.js";
-import { Event } from "../models/Event.js";
-import { RSVP } from "../models/RSVP.js";
 import { Comment } from "../models/Comment.js";
+import { Event } from "../models/Event.js";
+import { EventCategory } from "../models/EventCategory.js";
+import { EventReport } from "../models/EventReport.js";
 import { Friendship } from "../models/Friendship.js";
 import { Notification } from "../models/Notification.js";
-import { EventCategory } from "../models/EventCategory.js";
+import { RSVP } from "../models/RSVP.js";
+import { User } from "../models/User.js";
 import { UserPreference } from "../models/UserPreference.js";
-import { EventReport } from "../models/EventReport.js";
 
 export const UserRepository = AppDataSource.getRepository(User).extend({
   // Add custom methods here later
