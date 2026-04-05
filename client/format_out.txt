@@ -1,0 +1,80 @@
+﻿
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\context\AuthContext.tsx
+  42:15  error    Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+  43:17  error    Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<User | null>`                                                                         @typescript-eslint/no-unsafe-argument
+  43:22  error    Unsafe member access .user on an `any` value                                                                                                                        @typescript-eslint/no-unsafe-member-access
+  56:5   error    Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+  77:14  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                      react-refresh/only-export-components
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\main.tsx
+  7:1  warning  `./context/AuthContext` import should occur before import of `./router`  import/order
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\pages\Login.tsx
+  15:34  error  'React' is not defined                                                                                                                                              no-undef
+  27:13  error  Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+  30:25  error  Unsafe argument of type `any` assigned to a parameter of type `string | undefined`                                                                                  @typescript-eslint/no-unsafe-argument
+  30:30  error  Unsafe member access .message on an `any` value                                                                                                                     @typescript-eslint/no-unsafe-member-access
+  34:7   error  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+  35:19  error  Unexpected any. Specify a different type                                                                                                                            @typescript-eslint/no-explicit-any
+  36:16  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string | null>`                                                                       @typescript-eslint/no-unsafe-argument
+  36:20  error  Unsafe member access .message on an `any` value                                                                                                                     @typescript-eslint/no-unsafe-member-access
+  50:24  error  Promise-returning function provided to attribute where a void return was expected                                                                                   @typescript-eslint/no-misused-promises
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\pages\Profile.tsx
+   46:13  error    Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+   47:18  error    Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<ProfileData | null>`                                                                  @typescript-eslint/no-unsafe-argument
+   48:19  error    Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string>`                                                                              @typescript-eslint/no-unsafe-argument
+   48:24  error    Unsafe member access .user on an `any` value                                                                                                                        @typescript-eslint/no-unsafe-member-access
+   49:18  error    Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string>`                                                                              @typescript-eslint/no-unsafe-argument
+   49:23  error    Unsafe member access .user on an `any` value                                                                                                                        @typescript-eslint/no-unsafe-member-access
+   50:19  error    Unexpected any. Specify a different type                                                                                                                            @typescript-eslint/no-explicit-any
+   51:16  error    Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string | null>`                                                                       @typescript-eslint/no-unsafe-argument
+   51:20  error    Unsafe member access .message on an `any` value                                                                                                                     @typescript-eslint/no-unsafe-member-access
+   58:5   error    Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+   59:6   warning  React Hook useEffect has a missing dependency: 'fetchProfile'. Either include it or remove the dependency array                                                     react-hooks/exhaustive-deps
+   61:40  error    'React' is not defined                                                                                                                                              no-undef
+   74:13  error    Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+   81:33  error    Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+   81:49  error    Unsafe member access .avatarUrl on an `any` value                                                                                                                   @typescript-eslint/no-unsafe-member-access
+  129:88  error    Promise-returning function provided to attribute where a void return was expected                                                                                   @typescript-eslint/no-misused-promises
+  176:54  error    Promise-returning function provided to attribute where a void return was expected                                                                                   @typescript-eslint/no-misused-promises
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\pages\Register.tsx
+  13:34  error  'React' is not defined                                                                         no-undef
+  25:13  error  Unsafe assignment of an `any` value                                                            @typescript-eslint/no-unsafe-assignment
+  28:25  error  Unsafe argument of type `any` assigned to a parameter of type `string | undefined`             @typescript-eslint/no-unsafe-argument
+  28:30  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+  32:19  error  Unexpected any. Specify a different type                                                       @typescript-eslint/no-explicit-any
+  33:16  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string | null>`  @typescript-eslint/no-unsafe-argument
+  33:20  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+  53:26  error  Promise-returning function provided to attribute where a void return was expected              @typescript-eslint/no-misused-promises
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\pages\ResetPassword.tsx
+   19:41  error  'React' is not defined                                                                         no-undef
+   32:13  error  Unsafe assignment of an `any` value                                                            @typescript-eslint/no-unsafe-assignment
+   33:41  error  Unsafe argument of type `any` assigned to a parameter of type `string | undefined`             @typescript-eslint/no-unsafe-argument
+   33:46  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+   36:19  error  Unexpected any. Specify a different type                                                       @typescript-eslint/no-explicit-any
+   37:16  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string | null>`  @typescript-eslint/no-unsafe-argument
+   37:20  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+   43:39  error  'React' is not defined                                                                         no-undef
+   61:13  error  Unsafe assignment of an `any` value                                                            @typescript-eslint/no-unsafe-assignment
+   62:41  error  Unsafe argument of type `any` assigned to a parameter of type `string | undefined`             @typescript-eslint/no-unsafe-argument
+   62:46  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+   66:19  error  Unexpected any. Specify a different type                                                       @typescript-eslint/no-explicit-any
+   67:16  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string | null>`  @typescript-eslint/no-unsafe-argument
+   67:20  error  Unsafe member access .message on an `any` value                                                @typescript-eslint/no-unsafe-member-access
+   89:26  error  Promise-returning function provided to attribute where a void return was expected              @typescript-eslint/no-misused-promises
+  109:26  error  Promise-returning function provided to attribute where a void return was expected              @typescript-eslint/no-misused-promises
+
+C:\Users\singh\OneDrive\Desktop\helping-hand\client\src\pages\VerifyEmail.tsx
+  22:15  error  Unsafe assignment of an `any` value                                                                                                                                 @typescript-eslint/no-unsafe-assignment
+  26:22  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string>`                                                                              @typescript-eslint/no-unsafe-argument
+  26:27  error  Unsafe member access .message on an `any` value                                                                                                                     @typescript-eslint/no-unsafe-member-access
+  29:22  error  Unsafe argument of type `any` assigned to a parameter of type `SetStateAction<string>`                                                                              @typescript-eslint/no-unsafe-argument
+  29:27  error  Unsafe member access .message on an `any` value                                                                                                                     @typescript-eslint/no-unsafe-member-access
+  31:16  error  'error' is defined but never used                                                                                                                                   @typescript-eslint/no-unused-vars
+  37:5   error  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+
+Γ£û 63 problems (60 errors, 3 warnings)
+

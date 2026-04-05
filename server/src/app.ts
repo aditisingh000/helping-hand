@@ -1,7 +1,14 @@
+import path from "path";
+
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 
 import { AppDataSource } from "./config/data-source.js";
+import authRoutes from "./routes/auth.routes.js";
+import userRoutes from "./routes/user.routes.js";
+
+
 
 export function createApp() {
   const app = express();
@@ -30,6 +37,13 @@ export function createApp() {
     }),
   );
   app.use(express.json());
+  app.use(cookieParser());
+
+  app.use("/api/auth", authRoutes);
+  app.use("/api/users", userRoutes);
+
+  // Serve static uploads
+  app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
   app.get("/health", async (_req, res) => {
     let dbStatus = "disconnected";
