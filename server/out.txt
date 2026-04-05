@@ -1,0 +1,22 @@
+FAIL src/models/__tests__/models.test.ts
+  ● Test suite failed to run
+
+    ReferenceError: Cannot access 'Event' before initialization
+
+    [0m [90m 29 |[39m   [33m@[39m[33mManyToOne[39m(() [33m=>[39m [33mEvent[39m[33m,[39m (event) [33m=>[39m event[33m.[39mcomments[33m,[39m { onDelete[33m:[39m [32m"CASCADE"[39m })
+     [90m 30 |[39m   [33m@[39m[33mJoinColumn[39m({ name[33m:[39m [32m"event_id"[39m })
+    [31m[1m>[22m[39m[90m 31 |[39m   event[33m:[39m [33mEvent[39m[33m;[39m
+     [90m    |[39m          [31m[1m^[22m[39m
+     [90m 32 |[39m
+     [90m 33 |[39m   [33m@[39m[33mManyToOne[39m(() [33m=>[39m [33mUser[39m[33m,[39m { onDelete[33m:[39m [32m"CASCADE"[39m })
+     [90m 34 |[39m   [33m@[39m[33mJoinColumn[39m({ name[33m:[39m [32m"user_id"[39m })[0m
+
+      at src/models/Comment.ts:31:10
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        3.106 s
+Ran all test suites.
+(node:27928) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

@@ -15,4 +15,3 @@ This branch/PR groups the Phase 1 infrastructure setup work.
 - Repo/monorepo structure and base tooling
 - Local dev setup and build systems
 - CI pipeline scaffolding
-

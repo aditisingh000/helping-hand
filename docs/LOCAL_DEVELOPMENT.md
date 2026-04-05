@@ -60,4 +60,3 @@ To remove persisted data as well:
 ```bash
 docker compose down -v
 ```
-

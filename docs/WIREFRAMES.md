@@ -7,6 +7,7 @@ This document outlines the UI/UX wireframes, design patterns, and user interface
 ## Design Principles
 
 ### Core Principles
+
 1. **Accessibility First**: WCAG 2.1 AA compliance
 2. **Mobile-First**: Design for mobile, enhance for desktop
 3. **Clarity**: Clear visual hierarchy and intuitive navigation
@@ -69,6 +70,7 @@ Body:
 ## Landing Page Wireframe
 
 ### Hero Section
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  [Logo] HelpingHand                    [Sign In] [Sign Up]│
@@ -93,6 +95,7 @@ Body:
 ```
 
 **Key Elements:**
+
 - Large, clear headline with tagline
 - Primary CTA buttons (Sign Up, Get Started)
 - App screenshot mockups (3-column grid on desktop, stacked on mobile)
@@ -100,6 +103,7 @@ Body:
 - Clean, spacious layout
 
 ### About Section
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  About HelpingHand                                       │
@@ -119,6 +123,7 @@ Body:
 ```
 
 ### How It Works Section
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  How It Works                                            │
@@ -135,6 +140,7 @@ Body:
 ```
 
 ### Example Use Cases Section
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  Example Use Cases                                       │
@@ -154,6 +160,7 @@ Body:
 ```
 
 ### Footer
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  HelpingHand                                             │
@@ -173,6 +180,7 @@ Body:
 ## Web App Interface
 
 ### Top Navigation Bar
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [Logo] HelpingHand  [Map] [My Events] [Friends] [🔔(3)] [Profile▼]│
@@ -180,6 +188,7 @@ Body:
 ```
 
 **Components:**
+
 - Logo (links to home/map)
 - Navigation items: Map, My Events, Friends
 - Notification bell with badge count
@@ -189,6 +198,7 @@ Body:
 ### Main Map Page
 
 #### Desktop Layout
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [Logo] HelpingHand  [Map] [My Events] [Friends] [🔔] [Profile]│
@@ -228,6 +238,7 @@ Body:
 ```
 
 #### Event Pin Popup (InfoWindow)
+
 ```
 ┌─────────────────────────────────────┐
 │ [Event Banner Image]                 │
@@ -251,6 +262,7 @@ Body:
 ```
 
 **Pin Colors:**
+
 - Volunteer: Red (#FF6B6B)
 - Social: Teal (#4ECDC4)
 - Educational: Blue (#45B7D1)
@@ -261,6 +273,7 @@ Body:
 - Other: Gray (#95A5A6)
 
 ### Event Detail Page
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [← Back]                    [Share] [Report]            │
@@ -309,6 +322,7 @@ Body:
 ```
 
 ### Create Event Page
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [← Back]  Create New Event                              │
@@ -365,6 +379,7 @@ Body:
 ```
 
 ### Profile Page
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [← Back]  My Profile                                    │
@@ -409,6 +424,7 @@ Body:
 ```
 
 ### Friends Page
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [← Back]  Friends                                       │
@@ -442,6 +458,7 @@ Body:
 ## Mobile App Layout
 
 ### Home Screen (Map View)
+
 ```
 ┌─────────────────────────┐
 │ [☰] HelpingHand  [🔔] [👤]│
@@ -468,6 +485,7 @@ Body:
 ```
 
 **Bottom Navigation:**
+
 - Map (Home) - Active
 - Events - List view
 - Messages - Direct messages
@@ -475,6 +493,7 @@ Body:
 - Profile - User profile
 
 ### Event Detail Screen (Mobile)
+
 ```
 ┌─────────────────────────┐
 │ [←]              [Share] │
@@ -515,6 +534,7 @@ Body:
 ```
 
 ### Create Event Screen (Mobile)
+
 ```
 ┌─────────────────────────┐
 │ [←]  Create Event       │
@@ -558,6 +578,7 @@ Body:
 ```
 
 ### Profile Screen (Mobile)
+
 ```
 ┌─────────────────────────┐
 │ [←]  [Settings]         │
@@ -594,6 +615,7 @@ Body:
 ## Component Specifications
 
 ### Event Card Component
+
 ```
 ┌─────────────────────────────────────┐
 │ [Event Banner Image]                │
@@ -610,6 +632,7 @@ Body:
 ```
 
 ### Filter Sidebar Component
+
 ```
 ┌─────────────────────┐
 │ Filters             │
@@ -642,12 +665,14 @@ Body:
 ## Accessibility Features
 
 ### Keyboard Navigation
+
 - Tab order follows visual flow
 - Focus indicators on all interactive elements
 - Skip links for main content
 - Keyboard shortcuts for common actions
 
 ### Screen Reader Support
+
 - Semantic HTML elements
 - ARIA labels and roles
 - Alt text for all images
@@ -655,6 +680,7 @@ Body:
 - Form labels and error messages
 
 ### Visual Accessibility
+
 - High contrast mode support
 - Adjustable text sizes
 - Color-blind friendly color palette
@@ -662,6 +688,7 @@ Body:
 - Sufficient color contrast ratios (4.5:1 minimum)
 
 ### Responsive Breakpoints
+
 ```
 Mobile:  < 768px
 Tablet:  768px - 1024px
@@ -671,18 +698,21 @@ Desktop: > 1024px
 ## Interaction Patterns
 
 ### Map Interactions
+
 - **Click Pin**: Opens event popup
 - **Drag Map**: Pans to new area, refreshes events
 - **Zoom**: Updates visible radius
 - **Long Press** (Mobile): Quick event preview
 
 ### Event Actions
+
 - **RSVP**: Single tap/click
 - **Cancel RSVP**: Confirmation dialog
 - **Share**: Native share sheet/dialog
 - **Report**: Modal with reason selection
 
 ### Form Interactions
+
 - **Real-time Validation**: Shows errors as user types
 - **Auto-save**: Drafts saved automatically
 - **Location Picker**: Interactive map selection
@@ -691,12 +721,14 @@ Desktop: > 1024px
 ## Animation Guidelines
 
 ### Transitions
+
 - **Page Transitions**: 300ms ease-in-out
 - **Modal Open/Close**: 250ms ease-out
 - **Button Hover**: 150ms ease
 - **Loading States**: Skeleton screens
 
 ### Micro-interactions
+
 - **Button Press**: Subtle scale (0.98)
 - **Card Hover**: Slight elevation increase
 - **Notification**: Slide in from top
@@ -705,6 +737,7 @@ Desktop: > 1024px
 ## Figma Design System Recommendations
 
 ### Components to Create
+
 1. **Buttons**: Primary, Secondary, Text, Icon
 2. **Input Fields**: Text, Date, Time, Select, Textarea
 3. **Cards**: Event Card, User Card, Comment Card
@@ -714,6 +747,7 @@ Desktop: > 1024px
 7. **Lists**: Event List, User List, Notification List
 
 ### Design Tokens
+
 - Colors (with light/dark variants)
 - Typography scale
 - Spacing scale
@@ -722,6 +756,7 @@ Desktop: > 1024px
 - Icon library
 
 ### Prototyping
+
 - User flows for key actions
 - Interactive prototypes
 - Mobile and desktop variants
@@ -730,6 +765,7 @@ Desktop: > 1024px
 ## Implementation Notes
 
 ### Google Maps Integration
+
 - Custom marker icons per category
 - Clustered markers for performance
 - Custom InfoWindow styling
@@ -737,6 +773,7 @@ Desktop: > 1024px
 - Directions integration (future)
 
 ### Image Handling
+
 - Lazy loading for event images
 - Responsive image sizes
 - Placeholder images
@@ -744,6 +781,7 @@ Desktop: > 1024px
 - CDN delivery
 
 ### Performance Considerations
+
 - Virtual scrolling for long lists
 - Debounced search inputs
 - Throttled map updates

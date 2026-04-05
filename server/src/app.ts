@@ -1,6 +1,8 @@
 import cors from "cors";
 import express from "express";
 
+import { AppDataSource } from "./config/data-source.js";
+
 export function createApp() {
   const app = express();
 
@@ -29,8 +31,18 @@ export function createApp() {
   );
   app.use(express.json());
 
-  app.get("/health", (_req, res) => {
-    res.status(200).json({ ok: true });
+  app.get("/health", async (_req, res) => {
+    let dbStatus = "disconnected";
+    try {
+      if (AppDataSource.isInitialized) {
+        await AppDataSource.query("SELECT 1");
+        dbStatus = "connected";
+      }
+    } catch {
+      dbStatus = "error";
+    }
+
+    res.status(200).json({ ok: true, db: dbStatus });
   });
 
   return app;

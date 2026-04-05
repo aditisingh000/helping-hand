@@ -160,24 +160,24 @@ CREATE OR REPLACE FUNCTION update_event_rsvp_count()
 RETURNS TRIGGER AS $$
 BEGIN
     IF TG_OP = 'INSERT' THEN
-        UPDATE events 
-        SET current_rsvps = current_rsvps + 1 
+        UPDATE events
+        SET current_rsvps = current_rsvps + 1
         WHERE id = NEW.event_id;
         RETURN NEW;
     ELSIF TG_OP = 'DELETE' THEN
-        UPDATE events 
-        SET current_rsvps = current_rsvps - 1 
+        UPDATE events
+        SET current_rsvps = current_rsvps - 1
         WHERE id = OLD.event_id;
         RETURN OLD;
     ELSIF TG_OP = 'UPDATE' THEN
         -- Handle status changes
         IF OLD.status = 'going' AND NEW.status != 'going' THEN
-            UPDATE events 
-            SET current_rsvps = current_rsvps - 1 
+            UPDATE events
+            SET current_rsvps = current_rsvps - 1
             WHERE id = NEW.event_id;
         ELSIF OLD.status != 'going' AND NEW.status = 'going' THEN
-            UPDATE events 
-            SET current_rsvps = current_rsvps + 1 
+            UPDATE events
+            SET current_rsvps = current_rsvps + 1
             WHERE id = NEW.event_id;
         END IF;
         RETURN NEW;
@@ -347,11 +347,11 @@ CREATE INDEX idx_event_reports_status ON event_reports(status);
 
 ```sql
 -- Find events within X km of a point
-SELECT 
+SELECT
     e.*,
     ST_Distance(e.location, ST_MakePoint(:lng, :lat)::geography) / 1000 AS distance_km
 FROM events e
-WHERE 
+WHERE
     ST_DWithin(
         e.location,
         ST_MakePoint(:lng, :lat)::geography,
@@ -367,11 +367,11 @@ OFFSET :offset;
 ### Find Events by Category in Area
 
 ```sql
-SELECT 
+SELECT
     e.*,
     ST_Distance(e.location, ST_MakePoint(:lng, :lat)::geography) / 1000 AS distance_km
 FROM events e
-WHERE 
+WHERE
     ST_DWithin(
         e.location,
         ST_MakePoint(:lng, :lat)::geography,
@@ -386,11 +386,11 @@ ORDER BY e.date_time ASC;
 ### Find Nearby Users (for friend suggestions)
 
 ```sql
-SELECT 
+SELECT
     u.*,
     ST_Distance(u.location, ST_MakePoint(:lng, :lat)::geography) / 1000 AS distance_km
 FROM users u
-WHERE 
+WHERE
     ST_DWithin(
         u.location,
         ST_MakePoint(:lng, :lat)::geography,
@@ -407,7 +407,7 @@ LIMIT :limit;
 ### Get Event with Host and RSVP Count
 
 ```sql
-SELECT 
+SELECT
     e.*,
     u.name AS host_name,
     u.avatar_url AS host_avatar,
@@ -423,13 +423,13 @@ GROUP BY e.id, u.id;
 ### Get User's Upcoming Events
 
 ```sql
-SELECT 
+SELECT
     e.*,
     r.status AS rsvp_status,
     r.created_at AS rsvp_date
 FROM events e
 JOIN rsvps r ON e.id = r.event_id
-WHERE 
+WHERE
     r.user_id = :user_id
     AND r.status = 'going'
     AND e.date_time > NOW()
@@ -449,7 +449,7 @@ JOIN friendships f ON (
     (f.user_id = :user_id AND f.friend_id = r.user_id) OR
     (f.friend_id = :user_id AND f.user_id = r.user_id)
 )
-WHERE 
+WHERE
     f.status = 'accepted'
     AND e.date_time > NOW()
     AND e.status = 'active'
@@ -459,12 +459,14 @@ ORDER BY e.date_time ASC;
 ## Database Migrations
 
 Migrations should be managed using a tool like:
+
 - **Knex.js** (JavaScript)
 - **TypeORM** (TypeScript)
 - **Sequelize** (JavaScript)
 - **node-pg-migrate** (PostgreSQL specific)
 
 Example migration structure:
+
 ```
 migrations/
 ├── 001_create_users_table.sql
@@ -478,17 +480,20 @@ migrations/
 ## Performance Considerations
 
 ### Indexing Strategy
+
 - **Geospatial indexes**: GIST indexes on location columns
 - **Composite indexes**: For common query patterns
 - **Partial indexes**: For filtered queries (e.g., active events only)
 
 ### Query Optimization
+
 - Use `EXPLAIN ANALYZE` to optimize slow queries
 - Implement pagination for large result sets
 - Use materialized views for complex aggregations
 - Cache frequently accessed data in Redis
 
 ### Connection Pooling
+
 - Use connection pooling (pg-pool) to manage database connections
 - Configure appropriate pool size based on load
 - Monitor connection usage
@@ -496,16 +501,19 @@ migrations/
 ## Data Integrity
 
 ### Constraints
+
 - Foreign key constraints ensure referential integrity
 - Unique constraints prevent duplicate relationships
 - Check constraints validate data ranges
 - NOT NULL constraints ensure required fields
 
 ### Triggers
+
 - `update_event_rsvp_count`: Automatically updates RSVP count
 - `update_updated_at`: Updates timestamp on record changes
 
 ### Cascading Deletes
+
 - Deleting a user cascades to their events, RSVPs, comments
 - Deleting an event cascades to RSVPs and comments
 - Prevents orphaned records
