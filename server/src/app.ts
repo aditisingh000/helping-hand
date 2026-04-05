@@ -7,6 +7,7 @@ import express from "express";
 
 import { AppDataSource } from "./config/data-source.js";
 import authRoutes from "./routes/auth.routes.js";
+import eventRoutes from "./routes/event.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 export function createApp() {
@@ -48,6 +49,7 @@ export function createApp() {
 
   app.use("/api/auth", authRoutes);
   app.use("/api/users", userRoutes);
+  app.use("/api/events", eventRoutes);
 
   // Serve static uploads
   app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
