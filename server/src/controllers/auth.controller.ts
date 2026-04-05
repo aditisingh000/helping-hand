@@ -85,14 +85,13 @@ export const login = async (req: Request, res: Response) => {
 
     const token = generateAccessToken({ userId: user.id });
 
-    // Set cookie
-    // lgtm [js/clear-text-storage-of-sensitive-data] JWTs are inherently designed for payload storage
-    // codeql[js/clear-text-storage-of-sensitive-data] JWTs are inherently designed for payload storage
+    // Set securely signed cookie
     res.cookie("jwt", token, {
       httpOnly: true,
       secure: isProduction,
       sameSite: "lax",
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      signed: true,
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
     // Don't send password hash back

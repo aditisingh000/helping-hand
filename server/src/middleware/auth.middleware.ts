@@ -21,8 +21,11 @@ export const authenticate = async (req: Request, res: Response, next: NextFuncti
     const authHeader = req.headers.authorization;
     if (authHeader && authHeader.startsWith("Bearer ")) {
       token = authHeader.split(" ")[1];
+    } else if (req.signedCookies && req.signedCookies.jwt) {
+      token = req.signedCookies.jwt;
+    } else if (req.signedCookies && req.signedCookies.jwt) {
+      token = req.signedCookies.jwt;
     } else if (req.cookies && req.cookies.jwt) {
-      // Fallback to httpOnly cookie strategy
       token = req.cookies.jwt;
     }
 
