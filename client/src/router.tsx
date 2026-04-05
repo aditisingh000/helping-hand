@@ -5,7 +5,9 @@ import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import ResetPassword from "./pages/ResetPassword";
 import VerifyEmail from "./pages/VerifyEmail";
-import { HomePage } from "./routes/HomePage";
+import CreateEvent from "./pages/CreateEvent";
+import EventDetails from "./pages/EventDetails";
+import HomePage from "./routes/HomePage";
 import { RootLayout } from "./routes/RootLayout";
 import { SettingsPage } from "./routes/SettingsPage";
 
@@ -23,6 +25,8 @@ export const router = createBrowserRouter([
       { path: "reset-password", element: <ResetPassword /> },
       { path: "profile", element: <Profile /> },
       { path: "profile/:id", element: <Profile /> },
+      { path: "create-event", element: <CreateEvent /> },
+      { path: "events/:id", element: <EventDetails /> },
     ],
   },
 ]);
